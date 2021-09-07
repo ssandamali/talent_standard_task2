@@ -1,329 +1,329 @@
-﻿import _ from 'lodash'
+﻿import _ from "lodash";
 
 export const stateOptions = [
-    { key: 'AL', value: 'AL', text: 'Alabama' },
-    { key: 'AK', value: 'AK', text: 'Alaska' },
-    { key: 'AZ', value: 'AZ', text: 'Arizona' },
-    { key: 'AR', value: 'AR', text: 'Arkansas' },
-    { key: 'CA', value: 'CA', text: 'California' },
-    { key: 'CO', value: 'CO', text: 'Colorado' },
-    { key: 'CT', value: 'CT', text: 'Connecticut' },
-    { key: 'DE', value: 'DE', text: 'Delaware' },
-    { key: 'DC', value: 'DC', text: 'District Of Columbia' },
-    { key: 'FL', value: 'FL', text: 'Florida' },
-    { key: 'GA', value: 'GA', text: 'Georgia' },
-    { key: 'HI', value: 'HI', text: 'Hawaii' },
-    { key: 'ID', value: 'ID', text: 'Idaho' },
-    { key: 'IL', value: 'IL', text: 'Illinois' },
-    { key: 'IN', value: 'IN', text: 'Indiana' },
-    { key: 'IA', value: 'IA', text: 'Iowa' },
-    { key: 'KS', value: 'KS', text: 'Kansas' },
-    { key: 'KY', value: 'KY', text: 'Kentucky' },
-    { key: 'LA', value: 'LA', text: 'Louisiana' },
-    { key: 'ME', value: 'ME', text: 'Maine' },
-    { key: 'MD', value: 'MD', text: 'Maryland' },
-    { key: 'MA', value: 'MA', text: 'Massachusetts' },
-    { key: 'MI', value: 'MI', text: 'Michigan' },
-    { key: 'MN', value: 'MN', text: 'Minnesota' },
-    { key: 'MS', value: 'MS', text: 'Mississippi' },
-    { key: 'MO', value: 'MO', text: 'Missouri' },
-    { key: 'MT', value: 'MT', text: 'Montana' },
-    { key: 'NE', value: 'NE', text: 'Nebraska' },
-    { key: 'NV', value: 'NV', text: 'Nevada' },
-    { key: 'NH', value: 'NH', text: 'New Hampshire' },
-    { key: 'NJ', value: 'NJ', text: 'New Jersey' },
-    { key: 'NM', value: 'NM', text: 'New Mexico' },
-    { key: 'NY', value: 'NY', text: 'New York' },
-    { key: 'NC', value: 'NC', text: 'North Carolina' },
-    { key: 'ND', value: 'ND', text: 'North Dakota' },
-    { key: 'OH', value: 'OH', text: 'Ohio' },
-    { key: 'OK', value: 'OK', text: 'Oklahoma' },
-    { key: 'OR', value: 'OR', text: 'Oregon' },
-    { key: 'PA', value: 'PA', text: 'Pennsylvania' },
-    { key: 'RI', value: 'RI', text: 'Rhode Island' },
-    { key: 'SC', value: 'SC', text: 'South Carolina' },
-    { key: 'SD', value: 'SD', text: 'South Dakota' },
-    { key: 'TN', value: 'TN', text: 'Tennessee' },
-    { key: 'TX', value: 'TX', text: 'Texas' },
-    { key: 'UT', value: 'UT', text: 'Utah' },
-    { key: 'VT', value: 'VT', text: 'Vermont' },
-    { key: 'VA', value: 'VA', text: 'Virginia' },
-    { key: 'WA', value: 'WA', text: 'Washington' },
-    { key: 'WV', value: 'WV', text: 'West Virginia' },
-    { key: 'WI', value: 'WI', text: 'Wisconsin' },
-    { key: 'WY', value: 'WY', text: 'Wyoming' },
-]
+  { key: "AL", value: "AL", text: "Alabama" },
+  { key: "AK", value: "AK", text: "Alaska" },
+  { key: "AZ", value: "AZ", text: "Arizona" },
+  { key: "AR", value: "AR", text: "Arkansas" },
+  { key: "CA", value: "CA", text: "California" },
+  { key: "CO", value: "CO", text: "Colorado" },
+  { key: "CT", value: "CT", text: "Connecticut" },
+  { key: "DE", value: "DE", text: "Delaware" },
+  { key: "DC", value: "DC", text: "District Of Columbia" },
+  { key: "FL", value: "FL", text: "Florida" },
+  { key: "GA", value: "GA", text: "Georgia" },
+  { key: "HI", value: "HI", text: "Hawaii" },
+  { key: "ID", value: "ID", text: "Idaho" },
+  { key: "IL", value: "IL", text: "Illinois" },
+  { key: "IN", value: "IN", text: "Indiana" },
+  { key: "IA", value: "IA", text: "Iowa" },
+  { key: "KS", value: "KS", text: "Kansas" },
+  { key: "KY", value: "KY", text: "Kentucky" },
+  { key: "LA", value: "LA", text: "Louisiana" },
+  { key: "ME", value: "ME", text: "Maine" },
+  { key: "MD", value: "MD", text: "Maryland" },
+  { key: "MA", value: "MA", text: "Massachusetts" },
+  { key: "MI", value: "MI", text: "Michigan" },
+  { key: "MN", value: "MN", text: "Minnesota" },
+  { key: "MS", value: "MS", text: "Mississippi" },
+  { key: "MO", value: "MO", text: "Missouri" },
+  { key: "MT", value: "MT", text: "Montana" },
+  { key: "NE", value: "NE", text: "Nebraska" },
+  { key: "NV", value: "NV", text: "Nevada" },
+  { key: "NH", value: "NH", text: "New Hampshire" },
+  { key: "NJ", value: "NJ", text: "New Jersey" },
+  { key: "NM", value: "NM", text: "New Mexico" },
+  { key: "NY", value: "NY", text: "New York" },
+  { key: "NC", value: "NC", text: "North Carolina" },
+  { key: "ND", value: "ND", text: "North Dakota" },
+  { key: "OH", value: "OH", text: "Ohio" },
+  { key: "OK", value: "OK", text: "Oklahoma" },
+  { key: "OR", value: "OR", text: "Oregon" },
+  { key: "PA", value: "PA", text: "Pennsylvania" },
+  { key: "RI", value: "RI", text: "Rhode Island" },
+  { key: "SC", value: "SC", text: "South Carolina" },
+  { key: "SD", value: "SD", text: "South Dakota" },
+  { key: "TN", value: "TN", text: "Tennessee" },
+  { key: "TX", value: "TX", text: "Texas" },
+  { key: "UT", value: "UT", text: "Utah" },
+  { key: "VT", value: "VT", text: "Vermont" },
+  { key: "VA", value: "VA", text: "Virginia" },
+  { key: "WA", value: "WA", text: "Washington" },
+  { key: "WV", value: "WV", text: "West Virginia" },
+  { key: "WI", value: "WI", text: "Wisconsin" },
+  { key: "WY", value: "WY", text: "Wyoming" },
+];
 
 export const countryOptions = [
-    { key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' },
-    { key: 'ax', value: 'ax', flag: 'ax', text: 'Aland Islands' },
-    { key: 'al', value: 'al', flag: 'al', text: 'Albania' },
-    { key: 'dz', value: 'dz', flag: 'dz', text: 'Algeria' },
-    { key: 'as', value: 'as', flag: 'as', text: 'American Samoa' },
-    { key: 'ad', value: 'ad', flag: 'ad', text: 'Andorra' },
-    { key: 'ao', value: 'ao', flag: 'ao', text: 'Angola' },
-    { key: 'ai', value: 'ai', flag: 'ai', text: 'Anguilla' },
-    { key: 'ag', value: 'ag', flag: 'ag', text: 'Antigua' },
-    { key: 'ar', value: 'ar', flag: 'ar', text: 'Argentina' },
-    { key: 'am', value: 'am', flag: 'am', text: 'Armenia' },
-    { key: 'aw', value: 'aw', flag: 'aw', text: 'Aruba' },
-    { key: 'au', value: 'au', flag: 'au', text: 'Australia' },
-    { key: 'at', value: 'at', flag: 'at', text: 'Austria' },
-    { key: 'az', value: 'az', flag: 'az', text: 'Azerbaijan' },
-    { key: 'bs', value: 'bs', flag: 'bs', text: 'Bahamas' },
-    { key: 'bh', value: 'bh', flag: 'bh', text: 'Bahrain' },
-    { key: 'bd', value: 'bd', flag: 'bd', text: 'Bangladesh' },
-    { key: 'bb', value: 'bb', flag: 'bb', text: 'Barbados' },
-    { key: 'by', value: 'by', flag: 'by', text: 'Belarus' },
-    { key: 'be', value: 'be', flag: 'be', text: 'Belgium' },
-    { key: 'bz', value: 'bz', flag: 'bz', text: 'Belize' },
-    { key: 'bj', value: 'bj', flag: 'bj', text: 'Benin' },
-    { key: 'bm', value: 'bm', flag: 'bm', text: 'Bermuda' },
-    { key: 'bt', value: 'bt', flag: 'bt', text: 'Bhutan' },
-    { key: 'bo', value: 'bo', flag: 'bo', text: 'Bolivia' },
-    { key: 'ba', value: 'ba', flag: 'ba', text: 'Bosnia' },
-    { key: 'bw', value: 'bw', flag: 'bw', text: 'Botswana' },
-    { key: 'bv', value: 'bv', flag: 'bv', text: 'Bouvet Island' },
-    { key: 'br', value: 'br', flag: 'br', text: 'Brazil' },
-    { key: 'vg', value: 'vg', flag: 'vg', text: 'British Virgin Islands' },
-    { key: 'bn', value: 'bn', flag: 'bn', text: 'Brunei' },
-    { key: 'bg', value: 'bg', flag: 'bg', text: 'Bulgaria' },
-    { key: 'bf', value: 'bf', flag: 'bf', text: 'Burkina Faso' },
-    { key: 'bi', value: 'bi', flag: 'bi', text: 'Burundi' },
-    { key: 'tc', value: 'tc', flag: 'tc', text: 'Caicos Islands' },
-    { key: 'kh', value: 'kh', flag: 'kh', text: 'Cambodia' },
-    { key: 'cm', value: 'cm', flag: 'cm', text: 'Cameroon' },
-    { key: 'ca', value: 'ca', flag: 'ca', text: 'Canada' },
-    { key: 'cv', value: 'cv', flag: 'cv', text: 'Cape Verde' },
-    { key: 'ky', value: 'ky', flag: 'ky', text: 'Cayman Islands' },
-    { key: 'cf', value: 'cf', flag: 'cf', text: 'Central African Republic' },
-    { key: 'td', value: 'td', flag: 'td', text: 'Chad' },
-    { key: 'cl', value: 'cl', flag: 'cl', text: 'Chile' },
-    { key: 'cn', value: 'cn', flag: 'cn', text: 'China' },
-    { key: 'cx', value: 'cx', flag: 'cx', text: 'Christmas Island' },
-    { key: 'cc', value: 'cc', flag: 'cc', text: 'Cocos Islands' },
-    { key: 'co', value: 'co', flag: 'co', text: 'Colombia' },
-    { key: 'km', value: 'km', flag: 'km', text: 'Comoros' },
-    { key: 'cg', value: 'cg', flag: 'cg', text: 'Congo Brazzaville' },
-    { key: 'cd', value: 'cd', flag: 'cd', text: 'Congo' },
-    { key: 'ck', value: 'ck', flag: 'ck', text: 'Cook Islands' },
-    { key: 'cr', value: 'cr', flag: 'cr', text: 'Costa Rica' },
-    { key: 'ci', value: 'ci', flag: 'ci', text: 'Cote Divoire' },
-    { key: 'hr', value: 'hr', flag: 'hr', text: 'Croatia' },
-    { key: 'cu', value: 'cu', flag: 'cu', text: 'Cuba' },
-    { key: 'cy', value: 'cy', flag: 'cy', text: 'Cyprus' },
-    { key: 'cz', value: 'cz', flag: 'cz', text: 'Czech Republic' },
-    { key: 'dk', value: 'dk', flag: 'dk', text: 'Denmark' },
-    { key: 'dj', value: 'dj', flag: 'dj', text: 'Djibouti' },
-    { key: 'dm', value: 'dm', flag: 'dm', text: 'Dominica' },
-    { key: 'do', value: 'do', flag: 'do', text: 'Dominican Republic' },
-    { key: 'ec', value: 'ec', flag: 'ec', text: 'Ecuador' },
-    { key: 'eg', value: 'eg', flag: 'eg', text: 'Egypt' },
-    { key: 'sv', value: 'sv', flag: 'sv', text: 'El Salvador' },
-    { key: 'gb', value: 'gb', flag: 'gb', text: 'England' },
-    { key: 'gq', value: 'gq', flag: 'gq', text: 'Equatorial Guinea' },
-    { key: 'er', value: 'er', flag: 'er', text: 'Eritrea' },
-    { key: 'ee', value: 'ee', flag: 'ee', text: 'Estonia' },
-    { key: 'et', value: 'et', flag: 'et', text: 'Ethiopia' },
-    { key: 'eu', value: 'eu', flag: 'eu', text: 'European Union' },
-    { key: 'fk', value: 'fk', flag: 'fk', text: 'Falkland Islands' },
-    { key: 'fo', value: 'fo', flag: 'fo', text: 'Faroe Islands' },
-    { key: 'fj', value: 'fj', flag: 'fj', text: 'Fiji' },
-    { key: 'fi', value: 'fi', flag: 'fi', text: 'Finland' },
-    { key: 'fr', value: 'fr', flag: 'fr', text: 'France' },
-    { key: 'gf', value: 'gf', flag: 'gf', text: 'French Guiana' },
-    { key: 'pf', value: 'pf', flag: 'pf', text: 'French Polynesia' },
-    { key: 'tf', value: 'tf', flag: 'tf', text: 'French Territories' },
-    { key: 'ga', value: 'ga', flag: 'ga', text: 'Gabon' },
-    { key: 'gm', value: 'gm', flag: 'gm', text: 'Gambia' },
-    { key: 'ge', value: 'ge', flag: 'ge', text: 'Georgia' },
-    { key: 'de', value: 'de', flag: 'de', text: 'Germany' },
-    { key: 'gh', value: 'gh', flag: 'gh', text: 'Ghana' },
-    { key: 'gi', value: 'gi', flag: 'gi', text: 'Gibraltar' },
-    { key: 'gr', value: 'gr', flag: 'gr', text: 'Greece' },
-    { key: 'gl', value: 'gl', flag: 'gl', text: 'Greenland' },
-    { key: 'gd', value: 'gd', flag: 'gd', text: 'Grenada' },
-    { key: 'gp', value: 'gp', flag: 'gp', text: 'Guadeloupe' },
-    { key: 'gu', value: 'gu', flag: 'gu', text: 'Guam' },
-    { key: 'gt', value: 'gt', flag: 'gt', text: 'Guatemala' },
-    { key: 'gw', value: 'gw', flag: 'gw', text: 'Guinea-Bissau' },
-    { key: 'gn', value: 'gn', flag: 'gn', text: 'Guinea' },
-    { key: 'gy', value: 'gy', flag: 'gy', text: 'Guyana' },
-    { key: 'ht', value: 'ht', flag: 'ht', text: 'Haiti' },
-    { key: 'hm', value: 'hm', flag: 'hm', text: 'Heard Island' },
-    { key: 'hn', value: 'hn', flag: 'hn', text: 'Honduras' },
-    { key: 'hk', value: 'hk', flag: 'hk', text: 'Hong Kong' },
-    { key: 'hu', value: 'hu', flag: 'hu', text: 'Hungary' },
-    { key: 'is', value: 'is', flag: 'is', text: 'Iceland' },
-    { key: 'in', value: 'in', flag: 'in', text: 'India' },
-    { key: 'io', value: 'io', flag: 'io', text: 'Indian Ocean Territory' },
-    { key: 'id', value: 'id', flag: 'id', text: 'Indonesia' },
-    { key: 'ir', value: 'ir', flag: 'ir', text: 'Iran' },
-    { key: 'iq', value: 'iq', flag: 'iq', text: 'Iraq' },
-    { key: 'ie', value: 'ie', flag: 'ie', text: 'Ireland' },
-    { key: 'il', value: 'il', flag: 'il', text: 'Israel' },
-    { key: 'it', value: 'it', flag: 'it', text: 'Italy' },
-    { key: 'jm', value: 'jm', flag: 'jm', text: 'Jamaica' },
-    { key: 'jp', value: 'jp', flag: 'jp', text: 'Japan' },
-    { key: 'jo', value: 'jo', flag: 'jo', text: 'Jordan' },
-    { key: 'kz', value: 'kz', flag: 'kz', text: 'Kazakhstan' },
-    { key: 'ke', value: 'ke', flag: 'ke', text: 'Kenya' },
-    { key: 'ki', value: 'ki', flag: 'ki', text: 'Kiribati' },
-    { key: 'kw', value: 'kw', flag: 'kw', text: 'Kuwait' },
-    { key: 'kg', value: 'kg', flag: 'kg', text: 'Kyrgyzstan' },
-    { key: 'la', value: 'la', flag: 'la', text: 'Laos' },
-    { key: 'lv', value: 'lv', flag: 'lv', text: 'Latvia' },
-    { key: 'lb', value: 'lb', flag: 'lb', text: 'Lebanon' },
-    { key: 'ls', value: 'ls', flag: 'ls', text: 'Lesotho' },
-    { key: 'lr', value: 'lr', flag: 'lr', text: 'Liberia' },
-    { key: 'ly', value: 'ly', flag: 'ly', text: 'Libya' },
-    { key: 'li', value: 'li', flag: 'li', text: 'Liechtenstein' },
-    { key: 'lt', value: 'lt', flag: 'lt', text: 'Lithuania' },
-    { key: 'lu', value: 'lu', flag: 'lu', text: 'Luxembourg' },
-    { key: 'mo', value: 'mo', flag: 'mo', text: 'Macau' },
-    { key: 'mk', value: 'mk', flag: 'mk', text: 'Macedonia' },
-    { key: 'mg', value: 'mg', flag: 'mg', text: 'Madagascar' },
-    { key: 'mw', value: 'mw', flag: 'mw', text: 'Malawi' },
-    { key: 'my', value: 'my', flag: 'my', text: 'Malaysia' },
-    { key: 'mv', value: 'mv', flag: 'mv', text: 'Maldives' },
-    { key: 'ml', value: 'ml', flag: 'ml', text: 'Mali' },
-    { key: 'mt', value: 'mt', flag: 'mt', text: 'Malta' },
-    { key: 'mh', value: 'mh', flag: 'mh', text: 'Marshall Islands' },
-    { key: 'mq', value: 'mq', flag: 'mq', text: 'Martinique' },
-    { key: 'mr', value: 'mr', flag: 'mr', text: 'Mauritania' },
-    { key: 'mu', value: 'mu', flag: 'mu', text: 'Mauritius' },
-    { key: 'yt', value: 'yt', flag: 'yt', text: 'Mayotte' },
-    { key: 'mx', value: 'mx', flag: 'mx', text: 'Mexico' },
-    { key: 'fm', value: 'fm', flag: 'fm', text: 'Micronesia' },
-    { key: 'md', value: 'md', flag: 'md', text: 'Moldova' },
-    { key: 'mc', value: 'mc', flag: 'mc', text: 'Monaco' },
-    { key: 'mn', value: 'mn', flag: 'mn', text: 'Mongolia' },
-    { key: 'me', value: 'me', flag: 'me', text: 'Montenegro' },
-    { key: 'ms', value: 'ms', flag: 'ms', text: 'Montserrat' },
-    { key: 'ma', value: 'ma', flag: 'ma', text: 'Morocco' },
-    { key: 'mz', value: 'mz', flag: 'mz', text: 'Mozambique' },
-    { key: 'na', value: 'na', flag: 'na', text: 'Namibia' },
-    { key: 'nr', value: 'nr', flag: 'nr', text: 'Nauru' },
-    { key: 'np', value: 'np', flag: 'np', text: 'Nepal' },
-    { key: 'an', value: 'an', flag: 'an', text: 'Netherlands Antilles' },
-    { key: 'nl', value: 'nl', flag: 'nl', text: 'Netherlands' },
-    { key: 'nc', value: 'nc', flag: 'nc', text: 'New Caledonia' },
-    { key: 'pg', value: 'pg', flag: 'pg', text: 'New Guinea' },
-    { key: 'nz', value: 'nz', flag: 'nz', text: 'New Zealand' },
-    { key: 'ni', value: 'ni', flag: 'ni', text: 'Nicaragua' },
-    { key: 'ne', value: 'ne', flag: 'ne', text: 'Niger' },
-    { key: 'ng', value: 'ng', flag: 'ng', text: 'Nigeria' },
-    { key: 'nu', value: 'nu', flag: 'nu', text: 'Niue' },
-    { key: 'nf', value: 'nf', flag: 'nf', text: 'Norfolk Island' },
-    { key: 'kp', value: 'kp', flag: 'kp', text: 'North Korea' },
-    { key: 'mp', value: 'mp', flag: 'mp', text: 'Northern Mariana Islands' },
-    { key: 'no', value: 'no', flag: 'no', text: 'Norway' },
-    { key: 'om', value: 'om', flag: 'om', text: 'Oman' },
-    { key: 'pk', value: 'pk', flag: 'pk', text: 'Pakistan' },
-    { key: 'pw', value: 'pw', flag: 'pw', text: 'Palau' },
-    { key: 'ps', value: 'ps', flag: 'ps', text: 'Palestine' },
-    { key: 'pa', value: 'pa', flag: 'pa', text: 'Panama' },
-    { key: 'py', value: 'py', flag: 'py', text: 'Paraguay' },
-    { key: 'pe', value: 'pe', flag: 'pe', text: 'Peru' },
-    { key: 'ph', value: 'ph', flag: 'ph', text: 'Philippines' },
-    { key: 'pn', value: 'pn', flag: 'pn', text: 'Pitcairn Islands' },
-    { key: 'pl', value: 'pl', flag: 'pl', text: 'Poland' },
-    { key: 'pt', value: 'pt', flag: 'pt', text: 'Portugal' },
-    { key: 'pr', value: 'pr', flag: 'pr', text: 'Puerto Rico' },
-    { key: 'qa', value: 'qa', flag: 'qa', text: 'Qatar' },
-    { key: 're', value: 're', flag: 're', text: 'Reunion' },
-    { key: 'ro', value: 'ro', flag: 'ro', text: 'Romania' },
-    { key: 'ru', value: 'ru', flag: 'ru', text: 'Russia' },
-    { key: 'rw', value: 'rw', flag: 'rw', text: 'Rwanda' },
-    { key: 'sh', value: 'sh', flag: 'sh', text: 'Saint Helena' },
-    { key: 'kn', value: 'kn', flag: 'kn', text: 'Saint Kitts and Nevis' },
-    { key: 'lc', value: 'lc', flag: 'lc', text: 'Saint Lucia' },
-    { key: 'pm', value: 'pm', flag: 'pm', text: 'Saint Pierre' },
-    { key: 'vc', value: 'vc', flag: 'vc', text: 'Saint Vincent' },
-    { key: 'ws', value: 'ws', flag: 'ws', text: 'Samoa' },
-    { key: 'sm', value: 'sm', flag: 'sm', text: 'San Marino' },
-    { key: 'gs', value: 'gs', flag: 'gs', text: 'Sandwich Islands' },
-    { key: 'st', value: 'st', flag: 'st', text: 'Sao Tome' },
-    { key: 'sa', value: 'sa', flag: 'sa', text: 'Saudi Arabia' },
-    { key: 'sn', value: 'sn', flag: 'sn', text: 'Senegal' },
-    { key: 'cs', value: 'cs', flag: 'cs', text: 'Serbia' },
-    { key: 'rs', value: 'rs', flag: 'rs', text: 'Serbia' },
-    { key: 'sc', value: 'sc', flag: 'sc', text: 'Seychelles' },
-    { key: 'sl', value: 'sl', flag: 'sl', text: 'Sierra Leone' },
-    { key: 'sg', value: 'sg', flag: 'sg', text: 'Singapore' },
-    { key: 'sk', value: 'sk', flag: 'sk', text: 'Slovakia' },
-    { key: 'si', value: 'si', flag: 'si', text: 'Slovenia' },
-    { key: 'sb', value: 'sb', flag: 'sb', text: 'Solomon Islands' },
-    { key: 'so', value: 'so', flag: 'so', text: 'Somalia' },
-    { key: 'za', value: 'za', flag: 'za', text: 'South Africa' },
-    { key: 'kr', value: 'kr', flag: 'kr', text: 'South Korea' },
-    { key: 'es', value: 'es', flag: 'es', text: 'Spain' },
-    { key: 'lk', value: 'lk', flag: 'lk', text: 'Sri Lanka' },
-    { key: 'sd', value: 'sd', flag: 'sd', text: 'Sudan' },
-    { key: 'sr', value: 'sr', flag: 'sr', text: 'Suriname' },
-    { key: 'sj', value: 'sj', flag: 'sj', text: 'Svalbard' },
-    { key: 'sz', value: 'sz', flag: 'sz', text: 'Swaziland' },
-    { key: 'se', value: 'se', flag: 'se', text: 'Sweden' },
-    { key: 'ch', value: 'ch', flag: 'ch', text: 'Switzerland' },
-    { key: 'sy', value: 'sy', flag: 'sy', text: 'Syria' },
-    { key: 'tw', value: 'tw', flag: 'tw', text: 'Taiwan' },
-    { key: 'tj', value: 'tj', flag: 'tj', text: 'Tajikistan' },
-    { key: 'tz', value: 'tz', flag: 'tz', text: 'Tanzania' },
-    { key: 'th', value: 'th', flag: 'th', text: 'Thailand' },
-    { key: 'tl', value: 'tl', flag: 'tl', text: 'Timorleste' },
-    { key: 'tg', value: 'tg', flag: 'tg', text: 'Togo' },
-    { key: 'tk', value: 'tk', flag: 'tk', text: 'Tokelau' },
-    { key: 'to', value: 'to', flag: 'to', text: 'Tonga' },
-    { key: 'tt', value: 'tt', flag: 'tt', text: 'Trinidad' },
-    { key: 'tn', value: 'tn', flag: 'tn', text: 'Tunisia' },
-    { key: 'tr', value: 'tr', flag: 'tr', text: 'Turkey' },
-    { key: 'tm', value: 'tm', flag: 'tm', text: 'Turkmenistan' },
-    { key: 'tv', value: 'tv', flag: 'tv', text: 'Tuvalu' },
-    { key: 'ug', value: 'ug', flag: 'ug', text: 'Uganda' },
-    { key: 'ua', value: 'ua', flag: 'ua', text: 'Ukraine' },
-    { key: 'ae', value: 'ae', flag: 'ae', text: 'United Arab Emirates' },
-    { key: 'us', value: 'us', flag: 'us', text: 'United States' },
-    { key: 'uy', value: 'uy', flag: 'uy', text: 'Uruguay' },
-    { key: 'um', value: 'um', flag: 'um', text: 'Us Minor Islands' },
-    { key: 'vi', value: 'vi', flag: 'vi', text: 'Us Virgin Islands' },
-    { key: 'uz', value: 'uz', flag: 'uz', text: 'Uzbekistan' },
-    { key: 'vu', value: 'vu', flag: 'vu', text: 'Vanuatu' },
-    { key: 'va', value: 'va', flag: 'va', text: 'Vatican City' },
-    { key: 've', value: 've', flag: 've', text: 'Venezuela' },
-    { key: 'vn', value: 'vn', flag: 'vn', text: 'Vietnam' },
-    { key: 'wf', value: 'wf', flag: 'wf', text: 'Wallis and Futuna' },
-    { key: 'eh', value: 'eh', flag: 'eh', text: 'Western Sahara' },
-    { key: 'ye', value: 'ye', flag: 'ye', text: 'Yemen' },
-    { key: 'zm', value: 'zm', flag: 'zm', text: 'Zambia' },
-    { key: 'zw', value: 'zw', flag: 'zw', text: 'Zimbabwe' },
-]
+  { key: "af", value: "af", flag: "af", text: "Afghanistan" },
+  { key: "ax", value: "ax", flag: "ax", text: "Aland Islands" },
+  { key: "al", value: "al", flag: "al", text: "Albania" },
+  { key: "dz", value: "dz", flag: "dz", text: "Algeria" },
+  { key: "as", value: "as", flag: "as", text: "American Samoa" },
+  { key: "ad", value: "ad", flag: "ad", text: "Andorra" },
+  { key: "ao", value: "ao", flag: "ao", text: "Angola" },
+  { key: "ai", value: "ai", flag: "ai", text: "Anguilla" },
+  { key: "ag", value: "ag", flag: "ag", text: "Antigua" },
+  { key: "ar", value: "ar", flag: "ar", text: "Argentina" },
+  { key: "am", value: "am", flag: "am", text: "Armenia" },
+  { key: "aw", value: "aw", flag: "aw", text: "Aruba" },
+  { key: "au", value: "au", flag: "au", text: "Australia" },
+  { key: "at", value: "at", flag: "at", text: "Austria" },
+  { key: "az", value: "az", flag: "az", text: "Azerbaijan" },
+  { key: "bs", value: "bs", flag: "bs", text: "Bahamas" },
+  { key: "bh", value: "bh", flag: "bh", text: "Bahrain" },
+  { key: "bd", value: "bd", flag: "bd", text: "Bangladesh" },
+  { key: "bb", value: "bb", flag: "bb", text: "Barbados" },
+  { key: "by", value: "by", flag: "by", text: "Belarus" },
+  { key: "be", value: "be", flag: "be", text: "Belgium" },
+  { key: "bz", value: "bz", flag: "bz", text: "Belize" },
+  { key: "bj", value: "bj", flag: "bj", text: "Benin" },
+  { key: "bm", value: "bm", flag: "bm", text: "Bermuda" },
+  { key: "bt", value: "bt", flag: "bt", text: "Bhutan" },
+  { key: "bo", value: "bo", flag: "bo", text: "Bolivia" },
+  { key: "ba", value: "ba", flag: "ba", text: "Bosnia" },
+  { key: "bw", value: "bw", flag: "bw", text: "Botswana" },
+  { key: "bv", value: "bv", flag: "bv", text: "Bouvet Island" },
+  { key: "br", value: "br", flag: "br", text: "Brazil" },
+  { key: "vg", value: "vg", flag: "vg", text: "British Virgin Islands" },
+  { key: "bn", value: "bn", flag: "bn", text: "Brunei" },
+  { key: "bg", value: "bg", flag: "bg", text: "Bulgaria" },
+  { key: "bf", value: "bf", flag: "bf", text: "Burkina Faso" },
+  { key: "bi", value: "bi", flag: "bi", text: "Burundi" },
+  { key: "tc", value: "tc", flag: "tc", text: "Caicos Islands" },
+  { key: "kh", value: "kh", flag: "kh", text: "Cambodia" },
+  { key: "cm", value: "cm", flag: "cm", text: "Cameroon" },
+  { key: "ca", value: "ca", flag: "ca", text: "Canada" },
+  { key: "cv", value: "cv", flag: "cv", text: "Cape Verde" },
+  { key: "ky", value: "ky", flag: "ky", text: "Cayman Islands" },
+  { key: "cf", value: "cf", flag: "cf", text: "Central African Republic" },
+  { key: "td", value: "td", flag: "td", text: "Chad" },
+  { key: "cl", value: "cl", flag: "cl", text: "Chile" },
+  { key: "cn", value: "cn", flag: "cn", text: "China" },
+  { key: "cx", value: "cx", flag: "cx", text: "Christmas Island" },
+  { key: "cc", value: "cc", flag: "cc", text: "Cocos Islands" },
+  { key: "co", value: "co", flag: "co", text: "Colombia" },
+  { key: "km", value: "km", flag: "km", text: "Comoros" },
+  { key: "cg", value: "cg", flag: "cg", text: "Congo Brazzaville" },
+  { key: "cd", value: "cd", flag: "cd", text: "Congo" },
+  { key: "ck", value: "ck", flag: "ck", text: "Cook Islands" },
+  { key: "cr", value: "cr", flag: "cr", text: "Costa Rica" },
+  { key: "ci", value: "ci", flag: "ci", text: "Cote Divoire" },
+  { key: "hr", value: "hr", flag: "hr", text: "Croatia" },
+  { key: "cu", value: "cu", flag: "cu", text: "Cuba" },
+  { key: "cy", value: "cy", flag: "cy", text: "Cyprus" },
+  { key: "cz", value: "cz", flag: "cz", text: "Czech Republic" },
+  { key: "dk", value: "dk", flag: "dk", text: "Denmark" },
+  { key: "dj", value: "dj", flag: "dj", text: "Djibouti" },
+  { key: "dm", value: "dm", flag: "dm", text: "Dominica" },
+  { key: "do", value: "do", flag: "do", text: "Dominican Republic" },
+  { key: "ec", value: "ec", flag: "ec", text: "Ecuador" },
+  { key: "eg", value: "eg", flag: "eg", text: "Egypt" },
+  { key: "sv", value: "sv", flag: "sv", text: "El Salvador" },
+  { key: "gb", value: "gb", flag: "gb", text: "England" },
+  { key: "gq", value: "gq", flag: "gq", text: "Equatorial Guinea" },
+  { key: "er", value: "er", flag: "er", text: "Eritrea" },
+  { key: "ee", value: "ee", flag: "ee", text: "Estonia" },
+  { key: "et", value: "et", flag: "et", text: "Ethiopia" },
+  { key: "eu", value: "eu", flag: "eu", text: "European Union" },
+  { key: "fk", value: "fk", flag: "fk", text: "Falkland Islands" },
+  { key: "fo", value: "fo", flag: "fo", text: "Faroe Islands" },
+  { key: "fj", value: "fj", flag: "fj", text: "Fiji" },
+  { key: "fi", value: "fi", flag: "fi", text: "Finland" },
+  { key: "fr", value: "fr", flag: "fr", text: "France" },
+  { key: "gf", value: "gf", flag: "gf", text: "French Guiana" },
+  { key: "pf", value: "pf", flag: "pf", text: "French Polynesia" },
+  { key: "tf", value: "tf", flag: "tf", text: "French Territories" },
+  { key: "ga", value: "ga", flag: "ga", text: "Gabon" },
+  { key: "gm", value: "gm", flag: "gm", text: "Gambia" },
+  { key: "ge", value: "ge", flag: "ge", text: "Georgia" },
+  { key: "de", value: "de", flag: "de", text: "Germany" },
+  { key: "gh", value: "gh", flag: "gh", text: "Ghana" },
+  { key: "gi", value: "gi", flag: "gi", text: "Gibraltar" },
+  { key: "gr", value: "gr", flag: "gr", text: "Greece" },
+  { key: "gl", value: "gl", flag: "gl", text: "Greenland" },
+  { key: "gd", value: "gd", flag: "gd", text: "Grenada" },
+  { key: "gp", value: "gp", flag: "gp", text: "Guadeloupe" },
+  { key: "gu", value: "gu", flag: "gu", text: "Guam" },
+  { key: "gt", value: "gt", flag: "gt", text: "Guatemala" },
+  { key: "gw", value: "gw", flag: "gw", text: "Guinea-Bissau" },
+  { key: "gn", value: "gn", flag: "gn", text: "Guinea" },
+  { key: "gy", value: "gy", flag: "gy", text: "Guyana" },
+  { key: "ht", value: "ht", flag: "ht", text: "Haiti" },
+  { key: "hm", value: "hm", flag: "hm", text: "Heard Island" },
+  { key: "hn", value: "hn", flag: "hn", text: "Honduras" },
+  { key: "hk", value: "hk", flag: "hk", text: "Hong Kong" },
+  { key: "hu", value: "hu", flag: "hu", text: "Hungary" },
+  { key: "is", value: "is", flag: "is", text: "Iceland" },
+  { key: "in", value: "in", flag: "in", text: "India" },
+  { key: "io", value: "io", flag: "io", text: "Indian Ocean Territory" },
+  { key: "id", value: "id", flag: "id", text: "Indonesia" },
+  { key: "ir", value: "ir", flag: "ir", text: "Iran" },
+  { key: "iq", value: "iq", flag: "iq", text: "Iraq" },
+  { key: "ie", value: "ie", flag: "ie", text: "Ireland" },
+  { key: "il", value: "il", flag: "il", text: "Israel" },
+  { key: "it", value: "it", flag: "it", text: "Italy" },
+  { key: "jm", value: "jm", flag: "jm", text: "Jamaica" },
+  { key: "jp", value: "jp", flag: "jp", text: "Japan" },
+  { key: "jo", value: "jo", flag: "jo", text: "Jordan" },
+  { key: "kz", value: "kz", flag: "kz", text: "Kazakhstan" },
+  { key: "ke", value: "ke", flag: "ke", text: "Kenya" },
+  { key: "ki", value: "ki", flag: "ki", text: "Kiribati" },
+  { key: "kw", value: "kw", flag: "kw", text: "Kuwait" },
+  { key: "kg", value: "kg", flag: "kg", text: "Kyrgyzstan" },
+  { key: "la", value: "la", flag: "la", text: "Laos" },
+  { key: "lv", value: "lv", flag: "lv", text: "Latvia" },
+  { key: "lb", value: "lb", flag: "lb", text: "Lebanon" },
+  { key: "ls", value: "ls", flag: "ls", text: "Lesotho" },
+  { key: "lr", value: "lr", flag: "lr", text: "Liberia" },
+  { key: "ly", value: "ly", flag: "ly", text: "Libya" },
+  { key: "li", value: "li", flag: "li", text: "Liechtenstein" },
+  { key: "lt", value: "lt", flag: "lt", text: "Lithuania" },
+  { key: "lu", value: "lu", flag: "lu", text: "Luxembourg" },
+  { key: "mo", value: "mo", flag: "mo", text: "Macau" },
+  { key: "mk", value: "mk", flag: "mk", text: "Macedonia" },
+  { key: "mg", value: "mg", flag: "mg", text: "Madagascar" },
+  { key: "mw", value: "mw", flag: "mw", text: "Malawi" },
+  { key: "my", value: "my", flag: "my", text: "Malaysia" },
+  { key: "mv", value: "mv", flag: "mv", text: "Maldives" },
+  { key: "ml", value: "ml", flag: "ml", text: "Mali" },
+  { key: "mt", value: "mt", flag: "mt", text: "Malta" },
+  { key: "mh", value: "mh", flag: "mh", text: "Marshall Islands" },
+  { key: "mq", value: "mq", flag: "mq", text: "Martinique" },
+  { key: "mr", value: "mr", flag: "mr", text: "Mauritania" },
+  { key: "mu", value: "mu", flag: "mu", text: "Mauritius" },
+  { key: "yt", value: "yt", flag: "yt", text: "Mayotte" },
+  { key: "mx", value: "mx", flag: "mx", text: "Mexico" },
+  { key: "fm", value: "fm", flag: "fm", text: "Micronesia" },
+  { key: "md", value: "md", flag: "md", text: "Moldova" },
+  { key: "mc", value: "mc", flag: "mc", text: "Monaco" },
+  { key: "mn", value: "mn", flag: "mn", text: "Mongolia" },
+  { key: "me", value: "me", flag: "me", text: "Montenegro" },
+  { key: "ms", value: "ms", flag: "ms", text: "Montserrat" },
+  { key: "ma", value: "ma", flag: "ma", text: "Morocco" },
+  { key: "mz", value: "mz", flag: "mz", text: "Mozambique" },
+  { key: "na", value: "na", flag: "na", text: "Namibia" },
+  { key: "nr", value: "nr", flag: "nr", text: "Nauru" },
+  { key: "np", value: "np", flag: "np", text: "Nepal" },
+  { key: "an", value: "an", flag: "an", text: "Netherlands Antilles" },
+  { key: "nl", value: "nl", flag: "nl", text: "Netherlands" },
+  { key: "nc", value: "nc", flag: "nc", text: "New Caledonia" },
+  { key: "pg", value: "pg", flag: "pg", text: "New Guinea" },
+  { key: "nz", value: "nz", flag: "nz", text: "New Zealand" },
+  { key: "ni", value: "ni", flag: "ni", text: "Nicaragua" },
+  { key: "ne", value: "ne", flag: "ne", text: "Niger" },
+  { key: "ng", value: "ng", flag: "ng", text: "Nigeria" },
+  { key: "nu", value: "nu", flag: "nu", text: "Niue" },
+  { key: "nf", value: "nf", flag: "nf", text: "Norfolk Island" },
+  { key: "kp", value: "kp", flag: "kp", text: "North Korea" },
+  { key: "mp", value: "mp", flag: "mp", text: "Northern Mariana Islands" },
+  { key: "no", value: "no", flag: "no", text: "Norway" },
+  { key: "om", value: "om", flag: "om", text: "Oman" },
+  { key: "pk", value: "pk", flag: "pk", text: "Pakistan" },
+  { key: "pw", value: "pw", flag: "pw", text: "Palau" },
+  { key: "ps", value: "ps", flag: "ps", text: "Palestine" },
+  { key: "pa", value: "pa", flag: "pa", text: "Panama" },
+  { key: "py", value: "py", flag: "py", text: "Paraguay" },
+  { key: "pe", value: "pe", flag: "pe", text: "Peru" },
+  { key: "ph", value: "ph", flag: "ph", text: "Philippines" },
+  { key: "pn", value: "pn", flag: "pn", text: "Pitcairn Islands" },
+  { key: "pl", value: "pl", flag: "pl", text: "Poland" },
+  { key: "pt", value: "pt", flag: "pt", text: "Portugal" },
+  { key: "pr", value: "pr", flag: "pr", text: "Puerto Rico" },
+  { key: "qa", value: "qa", flag: "qa", text: "Qatar" },
+  { key: "re", value: "re", flag: "re", text: "Reunion" },
+  { key: "ro", value: "ro", flag: "ro", text: "Romania" },
+  { key: "ru", value: "ru", flag: "ru", text: "Russia" },
+  { key: "rw", value: "rw", flag: "rw", text: "Rwanda" },
+  { key: "sh", value: "sh", flag: "sh", text: "Saint Helena" },
+  { key: "kn", value: "kn", flag: "kn", text: "Saint Kitts and Nevis" },
+  { key: "lc", value: "lc", flag: "lc", text: "Saint Lucia" },
+  { key: "pm", value: "pm", flag: "pm", text: "Saint Pierre" },
+  { key: "vc", value: "vc", flag: "vc", text: "Saint Vincent" },
+  { key: "ws", value: "ws", flag: "ws", text: "Samoa" },
+  { key: "sm", value: "sm", flag: "sm", text: "San Marino" },
+  { key: "gs", value: "gs", flag: "gs", text: "Sandwich Islands" },
+  { key: "st", value: "st", flag: "st", text: "Sao Tome" },
+  { key: "sa", value: "sa", flag: "sa", text: "Saudi Arabia" },
+  { key: "sn", value: "sn", flag: "sn", text: "Senegal" },
+  { key: "cs", value: "cs", flag: "cs", text: "Serbia" },
+  { key: "rs", value: "rs", flag: "rs", text: "Serbia" },
+  { key: "sc", value: "sc", flag: "sc", text: "Seychelles" },
+  { key: "sl", value: "sl", flag: "sl", text: "Sierra Leone" },
+  { key: "sg", value: "sg", flag: "sg", text: "Singapore" },
+  { key: "sk", value: "sk", flag: "sk", text: "Slovakia" },
+  { key: "si", value: "si", flag: "si", text: "Slovenia" },
+  { key: "sb", value: "sb", flag: "sb", text: "Solomon Islands" },
+  { key: "so", value: "so", flag: "so", text: "Somalia" },
+  { key: "za", value: "za", flag: "za", text: "South Africa" },
+  { key: "kr", value: "kr", flag: "kr", text: "South Korea" },
+  { key: "es", value: "es", flag: "es", text: "Spain" },
+  { key: "lk", value: "lk", flag: "lk", text: "Sri Lanka" },
+  { key: "sd", value: "sd", flag: "sd", text: "Sudan" },
+  { key: "sr", value: "sr", flag: "sr", text: "Suriname" },
+  { key: "sj", value: "sj", flag: "sj", text: "Svalbard" },
+  { key: "sz", value: "sz", flag: "sz", text: "Swaziland" },
+  { key: "se", value: "se", flag: "se", text: "Sweden" },
+  { key: "ch", value: "ch", flag: "ch", text: "Switzerland" },
+  { key: "sy", value: "sy", flag: "sy", text: "Syria" },
+  { key: "tw", value: "tw", flag: "tw", text: "Taiwan" },
+  { key: "tj", value: "tj", flag: "tj", text: "Tajikistan" },
+  { key: "tz", value: "tz", flag: "tz", text: "Tanzania" },
+  { key: "th", value: "th", flag: "th", text: "Thailand" },
+  { key: "tl", value: "tl", flag: "tl", text: "Timorleste" },
+  { key: "tg", value: "tg", flag: "tg", text: "Togo" },
+  { key: "tk", value: "tk", flag: "tk", text: "Tokelau" },
+  { key: "to", value: "to", flag: "to", text: "Tonga" },
+  { key: "tt", value: "tt", flag: "tt", text: "Trinidad" },
+  { key: "tn", value: "tn", flag: "tn", text: "Tunisia" },
+  { key: "tr", value: "tr", flag: "tr", text: "Turkey" },
+  { key: "tm", value: "tm", flag: "tm", text: "Turkmenistan" },
+  { key: "tv", value: "tv", flag: "tv", text: "Tuvalu" },
+  { key: "ug", value: "ug", flag: "ug", text: "Uganda" },
+  { key: "ua", value: "ua", flag: "ua", text: "Ukraine" },
+  { key: "ae", value: "ae", flag: "ae", text: "United Arab Emirates" },
+  { key: "us", value: "us", flag: "us", text: "United States" },
+  { key: "uy", value: "uy", flag: "uy", text: "Uruguay" },
+  { key: "um", value: "um", flag: "um", text: "Us Minor Islands" },
+  { key: "vi", value: "vi", flag: "vi", text: "Us Virgin Islands" },
+  { key: "uz", value: "uz", flag: "uz", text: "Uzbekistan" },
+  { key: "vu", value: "vu", flag: "vu", text: "Vanuatu" },
+  { key: "va", value: "va", flag: "va", text: "Vatican City" },
+  { key: "ve", value: "ve", flag: "ve", text: "Venezuela" },
+  { key: "vn", value: "vn", flag: "vn", text: "Vietnam" },
+  { key: "wf", value: "wf", flag: "wf", text: "Wallis and Futuna" },
+  { key: "eh", value: "eh", flag: "eh", text: "Western Sahara" },
+  { key: "ye", value: "ye", flag: "ye", text: "Yemen" },
+  { key: "zm", value: "zm", flag: "zm", text: "Zambia" },
+  { key: "zw", value: "zw", flag: "zw", text: "Zimbabwe" },
+];
 
 export const languageOptions = [
-    { key: 'Arabic', text: 'Arabic', value: 'Arabic' },
-    { key: 'Chinese', text: 'Chinese', value: 'Chinese' },
-    { key: 'Danish', text: 'Danish', value: 'Danish' },
-    { key: 'Dutch', text: 'Dutch', value: 'Dutch' },
-    { key: 'English', text: 'English', value: 'English' },
-    { key: 'French', text: 'French', value: 'French' },
-    { key: 'German', text: 'German', value: 'German' },
-    { key: 'Greek', text: 'Greek', value: 'Greek' },
-    { key: 'Hungarian', text: 'Hungarian', value: 'Hungarian' },
-    { key: 'Italian', text: 'Italian', value: 'Italian' },
-    { key: 'Japanese', text: 'Japanese', value: 'Japanese' },
-    { key: 'Korean', text: 'Korean', value: 'Korean' },
-    { key: 'Lithuanian', text: 'Lithuanian', value: 'Lithuanian' },
-    { key: 'Persian', text: 'Persian', value: 'Persian' },
-    { key: 'Polish', text: 'Polish', value: 'Polish' },
-    { key: 'Portuguese', text: 'Portuguese', value: 'Portuguese' },
-    { key: 'Russian', text: 'Russian', value: 'Russian' },
-    { key: 'Spanish', text: 'Spanish', value: 'Spanish' },
-    { key: 'Swedish', text: 'Swedish', value: 'Swedish' },
-    { key: 'Turkish', text: 'Turkish', value: 'Turkish' },
-    { key: 'Vietnamese', text: 'Vietnamese', value: 'Vietnamese' },
-]
+  { key: "Arabic", text: "Arabic", value: "Arabic" },
+  { key: "Chinese", text: "Chinese", value: "Chinese" },
+  { key: "Danish", text: "Danish", value: "Danish" },
+  { key: "Dutch", text: "Dutch", value: "Dutch" },
+  { key: "English", text: "English", value: "English" },
+  { key: "French", text: "French", value: "French" },
+  { key: "German", text: "German", value: "German" },
+  { key: "Greek", text: "Greek", value: "Greek" },
+  { key: "Hungarian", text: "Hungarian", value: "Hungarian" },
+  { key: "Italian", text: "Italian", value: "Italian" },
+  { key: "Japanese", text: "Japanese", value: "Japanese" },
+  { key: "Korean", text: "Korean", value: "Korean" },
+  { key: "Lithuanian", text: "Lithuanian", value: "Lithuanian" },
+  { key: "Persian", text: "Persian", value: "Persian" },
+  { key: "Polish", text: "Polish", value: "Polish" },
+  { key: "Portuguese", text: "Portuguese", value: "Portuguese" },
+  { key: "Russian", text: "Russian", value: "Russian" },
+  { key: "Spanish", text: "Spanish", value: "Spanish" },
+  { key: "Swedish", text: "Swedish", value: "Swedish" },
+  { key: "Turkish", text: "Turkish", value: "Turkish" },
+  { key: "Vietnamese", text: "Vietnamese", value: "Vietnamese" },
+];
 
 export const countries = {
-  "Afghanistan": [
+  Afghanistan: [
     "Herat",
     "Kabul",
     "Kandahar",
@@ -331,17 +331,17 @@ export const countries = {
     "Rana",
     "Shar",
     "Sharif",
-    "Wazir Akbar Khan"
+    "Wazir Akbar Khan",
   ],
-  "Albania": [
+  Albania: [
     "Elbasan",
     "Petran",
     "Pogradec",
     "Shkoder",
     "Tirana",
-    "Ura Vajgurore"
+    "Ura Vajgurore",
   ],
-  "Algeria": [
+  Algeria: [
     "Algiers",
     "Annaba",
     "Azazga",
@@ -373,9 +373,9 @@ export const countries = {
     "Tissemsilt",
     "Tizi",
     "Tizi Ouzou",
-    "Tlemcen"
+    "Tlemcen",
   ],
-  "Andorra": [
+  Andorra: [
     "Andorra la Vella",
     "Canillo",
     "Encamp",
@@ -386,9 +386,9 @@ export const countries = {
     "Ordino",
     "Santa Coloma",
     "Sispony",
-    "Soldeu"
+    "Soldeu",
   ],
-  "Angola": [
+  Angola: [
     "Ambriz",
     "Benguela",
     "Cabinda",
@@ -409,7 +409,7 @@ export const countries = {
     "Ondjiva",
     "Piri",
     "Saurimo",
-    "Talatona"
+    "Talatona",
   ],
   "Antigua and Barbuda": [
     "All Saints",
@@ -417,9 +417,9 @@ export const countries = {
     "Codrington",
     "Old Road",
     "Parham",
-    "Woods"
+    "Woods",
   ],
-  "Argentina": [
+  Argentina: [
     "28 de Noviembre",
     "Abasto",
     "Acassuso",
@@ -996,9 +996,9 @@ export const countries = {
     "Wilde",
     "Winifreda",
     "Yerba Buena",
-    "Zenon Pereyra"
+    "Zenon Pereyra",
   ],
-  "Armenia": [
+  Armenia: [
     "Abovyan",
     "Agarak",
     "Apaga",
@@ -1012,9 +1012,9 @@ export const countries = {
     "Kapan",
     "Tsaghkadzor",
     "Vanadzor",
-    "Yerevan"
+    "Yerevan",
   ],
-  "Aruba": [
+  Aruba: [
     "Noord",
     "Oranjestad",
     "Palm Beach",
@@ -1025,9 +1025,9 @@ export const countries = {
     "Santa Cruz",
     "Sero Blanco",
     "Sint Nicolaas",
-    "Tanki Lender"
+    "Tanki Lender",
   ],
-  "Australia": [
+  Australia: [
     "Abbotsford",
     "Abbotsham",
     "Aberdeen",
@@ -2978,9 +2978,9 @@ export const countries = {
     "Yorkeys Knob",
     "Young",
     "Yowie Bay",
-    "Zeehan"
+    "Zeehan",
   ],
-  "Austria": [
+  Austria: [
     "Absam",
     "Absdorf",
     "Abtenau",
@@ -4369,9 +4369,9 @@ export const countries = {
     "Zurndorf",
     "Zwentendorf",
     "Zwettl Stadt",
-    "Zwolfaxing"
+    "Zwolfaxing",
   ],
-  "Azerbaijan": [
+  Azerbaijan: [
     "Baku",
     "Nakhchivan",
     "Quba",
@@ -4379,18 +4379,18 @@ export const countries = {
     "Sulutapa",
     "Sumqayit",
     "Xirdalan",
-    "Zurges"
+    "Zurges",
   ],
-  "Bahamas": [
+  Bahamas: [
     "Andros Town",
     "Dunmore Town",
     "Freeport",
     "Marsh Harbour",
     "Nassau",
     "Palmetto Point",
-    "Spanish Wells"
+    "Spanish Wells",
   ],
-  "Bahrain": [
+  Bahrain: [
     "Al Budayyi`",
     "Al Hadd",
     "Al Hamalah",
@@ -4407,9 +4407,9 @@ export const countries = {
     "Sanabis",
     "Sanad",
     "Sitrah",
-    "Tubli"
+    "Tubli",
   ],
-  "Bangladesh": [
+  Bangladesh: [
     "Agrabad",
     "Bangla",
     "Barisal",
@@ -4426,9 +4426,9 @@ export const countries = {
     "Narayanganj",
     "Rajshahi",
     "Tejgaon",
-    "Uttara"
+    "Uttara",
   ],
-  "Barbados": [
+  Barbados: [
     "Atlantic Shores",
     "Bagatelle",
     "Bloomsbury",
@@ -4451,9 +4451,9 @@ export const countries = {
     "Warrens",
     "White Hill",
     "Wildey",
-    "Worthing"
+    "Worthing",
   ],
-  "Belarus": [
+  Belarus: [
     "Baranovichi",
     "Borisov",
     "Brest",
@@ -4475,9 +4475,9 @@ export const countries = {
     "Shklow",
     "Vitebsk",
     "Zaslawye",
-    "Zhodzina"
+    "Zhodzina",
   ],
-  "Belgium": [
+  Belgium: [
     "Aalbeke",
     "Aalst",
     "Aalter",
@@ -5614,18 +5614,18 @@ export const countries = {
     "Zwevegem",
     "Zwevezele",
     "Zwijnaarde",
-    "Zwijndrecht"
+    "Zwijndrecht",
   ],
-  "Belize": [
+  Belize: [
     "Belize City",
     "Belmopan",
     "Benque Viejo del Carmen",
     "Freetown Sibun",
     "Ladyville",
     "San Ignacio",
-    "San Pedro Town"
+    "San Pedro Town",
   ],
-  "Bolivia": [
+  Bolivia: [
     "Anillo",
     "Aroma",
     "Bermejo",
@@ -5641,7 +5641,7 @@ export const countries = {
     "Santa Cruz",
     "Sucre",
     "Tarija",
-    "Trinidad"
+    "Trinidad",
   ],
   "Bosnia and Herzegovina": [
     "Banja",
@@ -5683,16 +5683,10 @@ export const countries = {
     "Vogosca",
     "Zenica",
     "Zepce",
-    "Zivinice"
+    "Zivinice",
   ],
-  "Botswana": [
-    "Francistown",
-    "Gaborone",
-    "Orapa",
-    "Serowe",
-    "Village"
-  ],
-  "Brazil": [
+  Botswana: ["Francistown", "Gaborone", "Orapa", "Serowe", "Village"],
+  Brazil: [
     "Abadiania",
     "Abaetetuba",
     "Abelardo Luz",
@@ -7316,7 +7310,7 @@ export const countries = {
     "Sao Caetano do Sul",
     "Sao Carlos",
     "Sao Cristovao",
-    "Sao Domingos", 
+    "Sao Domingos",
     "Sao Felipe",
     "Sao Felix",
     "Sao Fidelis",
@@ -7620,9 +7614,9 @@ export const countries = {
     "Witmarsum",
     "Xanxere",
     "Xavantina",
-    "Xaxim"
+    "Xaxim",
   ],
-  "Brunei": [
+  Brunei: [
     "Bandar Seri Begawan",
     "Bangar",
     "Kampong Jerudong",
@@ -7630,9 +7624,9 @@ export const countries = {
     "Kuala Belait",
     "Panaga",
     "Seria",
-    "Tutong"
+    "Tutong",
   ],
-  "Bulgaria": [
+  Bulgaria: [
     "Akhtopol",
     "Aksakovo",
     "Aleksandriya",
@@ -7852,9 +7846,9 @@ export const countries = {
     "Yambol",
     "Zavet",
     "Zlatitrap",
-    "Zlatograd"
+    "Zlatograd",
   ],
-  "Cambodia": [
+  Cambodia: [
     "Moung Roessei",
     "Phnom Penh",
     "Phumi Boeng (1)",
@@ -7868,9 +7862,9 @@ export const countries = {
     "Phumi Vott Phnum",
     "Sihanoukville",
     "Tuol Kok",
-    "Vott Kampong Svay"
+    "Vott Kampong Svay",
   ],
-  "Cameroon": [
+  Cameroon: [
     "Bafia",
     "Bafoussam",
     "Bamenda",
@@ -7879,9 +7873,9 @@ export const countries = {
     "Kribi",
     "Kumba",
     "Ringo",
-    "Tibati"
+    "Tibati",
   ],
-  "Canada": [
+  Canada: [
     "100 Mile House",
     "Abbey",
     "Abbotsford",
@@ -9967,7 +9961,7 @@ export const countries = {
     "Yorkton",
     "Youbou",
     "Young",
-    "Youngstown"
+    "Youngstown",
   ],
   "Cayman Islands": [
     "Bodden Town",
@@ -9976,9 +9970,9 @@ export const countries = {
     "Newlands",
     "Savannah",
     "Spot Bay",
-    "West Bay"
+    "West Bay",
   ],
-  "Chile": [
+  Chile: [
     "Algarrobo",
     "Angol",
     "Antofagasta",
@@ -10099,9 +10093,9 @@ export const countries = {
     "Vallenar",
     "Villa Alemana",
     "Villarrica",
-    "Vitacura"
+    "Vitacura",
   ],
-  "China": [
+  China: [
     "Aishang",
     "Aizhou",
     "Aksu",
@@ -11815,9 +11809,9 @@ export const countries = {
     "Zongxoi",
     "Zoucheng",
     "Zunyi",
-    "Zuxi"
+    "Zuxi",
   ],
-  "Colombia": [
+  Colombia: [
     "Acacias",
     "Acevedo",
     "Aguachica",
@@ -11928,15 +11922,9 @@ export const countries = {
     "Villavicencio",
     "Yopal",
     "Yotoco",
-    "Yumbo"
+    "Yumbo",
   ],
-  "Congo": [
-    "Banana",
-    "Goma",
-    "Kinshasa",
-    "Likasi",
-    "Lubumbashi"
-  ],
+  Congo: ["Banana", "Goma", "Kinshasa", "Likasi", "Lubumbashi"],
   "Costa Rica": [
     "Alajuela",
     "Alajuelita",
@@ -12001,9 +11989,9 @@ export const countries = {
     "Turrialba",
     "Turrucares",
     "Zapote",
-    "Zarcero"
+    "Zarcero",
   ],
-  "Croatia": [
+  Croatia: [
     "Antunovac",
     "Baska",
     "Baska Voda",
@@ -12144,9 +12132,9 @@ export const countries = {
     "Zadar",
     "Zagreb",
     "Zapresic",
-    "Zlatar"
+    "Zlatar",
   ],
-  "Cuba": [
+  Cuba: [
     "Bayamo",
     "Cienfuegos",
     "Habana",
@@ -12156,9 +12144,9 @@ export const countries = {
     "Matanzas",
     "Santiago de Cuba",
     "Varadero",
-    "Villa"
+    "Villa",
   ],
-  "Cyprus": [
+  Cyprus: [
     "Agia Anna",
     "Aradippou",
     "Ayia Marina",
@@ -12183,7 +12171,7 @@ export const countries = {
     "Prodromi",
     "Sotira",
     "Strovolos",
-    "Tera"
+    "Tera",
   ],
   "Czech Republic": [
     "Adamov",
@@ -13125,9 +13113,9 @@ export const countries = {
     "Znojmo",
     "Zubri",
     "Zulova",
-    "Zvole"
+    "Zvole",
   ],
-  "Denmark": [
+  Denmark: [
     "Aabenraa",
     "Aabybro",
     "Aalborg",
@@ -13694,7 +13682,7 @@ export const countries = {
     "Vojens",
     "Vorbasse",
     "Vordingborg",
-    "Vra"
+    "Vra",
   ],
   "Dominican Republic": [
     "Arenazo",
@@ -13719,9 +13707,9 @@ export const countries = {
     "San Jose de Ocoa",
     "Santa Cruz de Barahona",
     "Santiago de los Caballeros",
-    "Santo Domingo"
+    "Santo Domingo",
   ],
-  "Ecuador": [
+  Ecuador: [
     "Ambato",
     "Atacames",
     "Atuntaqui",
@@ -13790,9 +13778,9 @@ export const countries = {
     "Vinces",
     "Zamora",
     "Zaruma",
-    "Zumba"
+    "Zumba",
   ],
-  "Egypt": [
+  Egypt: [
     "Abu Hammad",
     "Al Mahallah al Kubra",
     "Al Mansurah",
@@ -13831,7 +13819,7 @@ export const countries = {
     "Suez",
     "Tanta",
     "Toukh",
-    "Zagazig"
+    "Zagazig",
   ],
   "El Salvador": [
     "Ahuachapan",
@@ -13863,9 +13851,9 @@ export const countries = {
     "Sonsonate",
     "Soyapango",
     "Usulutan",
-    "Zaragoza"
+    "Zaragoza",
   ],
-  "Estonia": [
+  Estonia: [
     "Aasmae",
     "Aaviku",
     "Aespa",
@@ -13932,7 +13920,7 @@ export const countries = {
     "Venevere",
     "Viimsi",
     "Viljandi",
-    "Voka"
+    "Voka",
   ],
   "Faroe Islands": [
     "Argir",
@@ -13942,9 +13930,9 @@ export const countries = {
     "Leirvik",
     "Saltangara",
     "Signabour",
-    "Strendur"
+    "Strendur",
   ],
-  "Finland": [
+  Finland: [
     "Aapajoki",
     "Aavasaksa",
     "Aitoo",
@@ -14415,9 +14403,9 @@ export const countries = {
     "Ylihaermae",
     "Ylitornio",
     "Ylivieska",
-    "Ypaejae"
+    "Ypaejae",
   ],
-  "France": [
+  France: [
     "Aast",
     "Abancourt",
     "Abbans-Dessus",
@@ -26107,7 +26095,7 @@ export const countries = {
     "Valdampierre",
     "Valdoie",
     "Valdurenque",
-    "Valencay", 
+    "Valencay",
     "Valence",
     "Valence-sur-Baise",
     "Valenciennes",
@@ -26953,7 +26941,7 @@ export const countries = {
     "Zinswiller",
     "Zittersheim",
     "Zouafques",
-    "Zutzendorf"
+    "Zutzendorf",
   ],
   "French Polynesia": [
     "Arue",
@@ -26962,16 +26950,10 @@ export const countries = {
     "Paeau",
     "Papeete",
     "Pirae",
-    "Punaauia"
+    "Punaauia",
   ],
-  "Gabon": [
-    "Gamba",
-    "Libreville",
-    "Mamagnia",
-    "Moanda",
-    "Port-Gentil"
-  ],
-  "Georgia": [
+  Gabon: ["Gamba", "Libreville", "Mamagnia", "Moanda", "Port-Gentil"],
+  Georgia: [
     "Gogolesubani",
     "Kutaisi",
     "Lentekhi",
@@ -26980,9 +26962,9 @@ export const countries = {
     "Sukhumi",
     "Tbilisi",
     "Zemo-Avchala",
-    "Zugdidi"
+    "Zugdidi",
   ],
-  "Germany": [
+  Germany: [
     "Aach",
     "Aachen",
     "Aalen",
@@ -34353,9 +34335,9 @@ export const countries = {
     "Zwiefalten",
     "Zwiesel",
     "Zwingenberg",
-    "Zwonitz"
+    "Zwonitz",
   ],
-  "Ghana": [
+  Ghana: [
     "Accra",
     "Bawku",
     "Berekum",
@@ -34371,9 +34353,9 @@ export const countries = {
     "Takoradi",
     "Tema",
     "Wa",
-    "Winneba"
+    "Winneba",
   ],
-  "Greece": [
+  Greece: [
     "Aegina",
     "Agioi Anargyroi",
     "Agios Nikolaos",
@@ -34538,9 +34520,9 @@ export const countries = {
     "Vouliagmeni",
     "Xanthi",
     "Xylokastro",
-    "Zakynthos"
+    "Zakynthos",
   ],
-  "Greenland": [
+  Greenland: [
     "Aasiaat",
     "Ilulissat",
     "Kapisillit",
@@ -34557,9 +34539,9 @@ export const countries = {
     "Sisimiut",
     "Tasiilaq",
     "Upernavik",
-    "Uummannaq Kommune"
+    "Uummannaq Kommune",
   ],
-  "Guadeloupe": [
+  Guadeloupe: [
     "Anse-Bertrand",
     "Baie Mahault",
     "Baie-Mahault",
@@ -34587,17 +34569,17 @@ export const countries = {
     "Terre-de-Bas",
     "Terre-de-Haut",
     "Trois-Rivieres",
-    "Village"
+    "Village",
   ],
-  "Guam": [
+  Guam: [
     "Barrigada Village",
     "Dededo Village",
     "Inarajan Village",
     "Santa Rita",
     "Tamuning-Tumon-Harmon Village",
-    "Yigo Village"
+    "Yigo Village",
   ],
-  "Guatemala": [
+  Guatemala: [
     "Antigua Guatemala",
     "Cambote",
     "Catarina",
@@ -34639,9 +34621,9 @@ export const countries = {
     "Solola",
     "Villa Nueva",
     "Vista Hermosa",
-    "Zacapa"
+    "Zacapa",
   ],
-  "Guinea": [
+  Guinea: [
     "Conakry",
     "Dabola",
     "Kalia",
@@ -34649,9 +34631,9 @@ export const countries = {
     "Lola",
     "Mamou",
     "Port Kamsar",
-    "Sangaredi"
+    "Sangaredi",
   ],
-  "Haiti": [
+  Haiti: [
     "Carrefour",
     "Delmar",
     "Duverger",
@@ -34661,7 +34643,7 @@ export const countries = {
     "Petionville",
     "Port-au-Prince",
     "Prince",
-    "Turgeau"
+    "Turgeau",
   ],
   "Hashemite Kingdom of Jordan": [
     "Amman",
@@ -34670,9 +34652,9 @@ export const countries = {
     "Irbid",
     "Madaba",
     "Sahab",
-    "Salt"
+    "Salt",
   ],
-  "Honduras": [
+  Honduras: [
     "Choloma",
     "Comayagua",
     "Comayaguela",
@@ -34691,7 +34673,7 @@ export const countries = {
     "San Pedro Sula",
     "Santa Barbara",
     "Sula",
-    "Tegucigalpa"
+    "Tegucigalpa",
   ],
   "Hong Kong": [
     "Aberdeen",
@@ -34775,9 +34757,9 @@ export const countries = {
     "Wong Tai Sin",
     "Yau Ma Tei",
     "Ying Pun",
-    "Yuen Long San Hui"
+    "Yuen Long San Hui",
   ],
-  "Hungary": [
+  Hungary: [
     "Abaujszanto",
     "Abda",
     "Abony",
@@ -35516,9 +35498,9 @@ export const countries = {
     "Zirc",
     "Zsambek",
     "Zsambok",
-    "Zsombo"
+    "Zsombo",
   ],
-  "Iceland": [
+  Iceland: [
     "Akranes",
     "Akureyri",
     "Borgarnes",
@@ -35536,9 +35518,9 @@ export const countries = {
     "Skagastrond",
     "Stokkseyri",
     "Vestmannaeyjar",
-    "Vogar"
+    "Vogar",
   ],
-  "India": [
+  India: [
     "Abdul",
     "Adilabad",
     "Adwani",
@@ -36548,9 +36530,9 @@ export const countries = {
     "Yanam",
     "Yavatmal",
     "Yeola",
-    "Yercaud"
+    "Yercaud",
   ],
-  "Indonesia": [
+  Indonesia: [
     "Abadi",
     "Adiantorop",
     "Airmadidi",
@@ -36819,9 +36801,9 @@ export const countries = {
     "Wonogiri",
     "Wonosari",
     "Wonosobo",
-    "Yogyakarta"
+    "Yogyakarta",
   ],
-  "Iran": [
+  Iran: [
     "`Aliabad",
     "`Aliabad-e Aq Hesar",
     "`Oryan",
@@ -37054,9 +37036,9 @@ export const countries = {
     "Zahra",
     "Zangiabad",
     "Zanjan",
-    "Zarand"
+    "Zarand",
   ],
-  "Iraq": [
+  Iraq: [
     "Al `Amarah",
     "Al Hillah",
     "Baghdad",
@@ -37072,9 +37054,9 @@ export const countries = {
     "Mosul",
     "Najaf",
     "Sulaymaniyah",
-    "Tikrit"
+    "Tikrit",
   ],
-  "Ireland": [
+  Ireland: [
     "Abbeyfeale",
     "Abbeyleix",
     "Ardee",
@@ -37365,7 +37347,7 @@ export const countries = {
     "Wicklow",
     "Williamstown",
     "Windy Arbour",
-    "Youghal"
+    "Youghal",
   ],
   "Isle of Man": [
     "Ballasalla",
@@ -37380,9 +37362,9 @@ export const countries = {
     "Port Erin",
     "Port Saint Mary",
     "Ramsey",
-    "Saint Johns"
+    "Saint Johns",
   ],
-  "Israel": [
+  Israel: [
     "`Alma",
     "`Amir",
     "`Arugot",
@@ -37533,9 +37515,9 @@ export const countries = {
     "Yaqum",
     "Yavne",
     "Yehud",
-    "Zoran"
+    "Zoran",
   ],
-  "Italy": [
+  Italy: [
     "Abano Terme",
     "Abbadia Lariana",
     "Abbadia San Salvatore",
@@ -41932,9 +41914,9 @@ export const countries = {
     "Zoldo Alto",
     "Zollino",
     "Zoppola",
-    "Zumaglia"
+    "Zumaglia",
   ],
-  "Jamaica": [
+  Jamaica: [
     "Black River",
     "Browns Town",
     "Gordon Town",
@@ -41951,9 +41933,9 @@ export const countries = {
     "Portland Cottage",
     "Portmore",
     "Runaway Bay",
-    "Spanish Town"
+    "Spanish Town",
   ],
-  "Japan": [
+  Japan: [
     "Abashiri",
     "Abiko",
     "Abira",
@@ -43117,9 +43099,9 @@ export const countries = {
     "Yutaka",
     "Yuzawa",
     "Zama",
-    "Zushi"
+    "Zushi",
   ],
-  "Kazakhstan": [
+  Kazakhstan: [
     "Aksay",
     "Aksoran",
     "Almaty",
@@ -43161,9 +43143,9 @@ export const countries = {
     "Uritskiy",
     "Ust-Kamenogorsk",
     "Vostok",
-    "Zyryanovsk"
+    "Zyryanovsk",
   ],
-  "Kenya": [
+  Kenya: [
     "Bondo",
     "Chuka",
     "Eldoret",
@@ -43186,16 +43168,10 @@ export const countries = {
     "Siaya",
     "Thika",
     "Turbo",
-    "Wote"
+    "Wote",
   ],
-  "Kosovo": [
-    "Dunavo",
-    "Ferizaj",
-    "Mitrovica",
-    "Pristina",
-    "Prizren"
-  ],
-  "Kuwait": [
+  Kosovo: ["Dunavo", "Ferizaj", "Mitrovica", "Pristina", "Prizren"],
+  Kuwait: [
     "Abraq Khaytan",
     "Ad Dasmah",
     "Ad Dawhah",
@@ -43211,9 +43187,9 @@ export const countries = {
     "Janub as Surrah",
     "Kayfan",
     "Kuwait City",
-    "Salwa"
+    "Salwa",
   ],
-  "Latvia": [
+  Latvia: [
     "Adazi",
     "Agenskalns",
     "Aizkraukle",
@@ -43261,9 +43237,9 @@ export const countries = {
     "Varsava",
     "Ventspils",
     "Zasa",
-    "Zilupe"
+    "Zilupe",
   ],
-  "Lebanon": [
+  Lebanon: [
     "Aaley",
     "Adma",
     "Ashrafiye",
@@ -43281,16 +43257,10 @@ export const countries = {
     "Sidon",
     "Tripoli",
     "Yanar",
-    "Zgharta"
+    "Zgharta",
   ],
-  "Libya": [
-    "Benghazi",
-    "Misratah",
-    "Sabha",
-    "Tripoli",
-    "Zliten"
-  ],
-  "Liechtenstein": [
+  Libya: ["Benghazi", "Misratah", "Sabha", "Tripoli", "Zliten"],
+  Liechtenstein: [
     "Balzers",
     "Bendern",
     "Eschen",
@@ -43304,9 +43274,9 @@ export const countries = {
     "Schellenberg",
     "Triesen",
     "Triesenberg",
-    "Vaduz"
+    "Vaduz",
   ],
-  "Luxembourg": [
+  Luxembourg: [
     "Ahn",
     "Alzingen",
     "Bascharage",
@@ -43422,9 +43392,9 @@ export const countries = {
     "Walferdange",
     "Wasserbillig",
     "Wolpert",
-    "Wormeldange"
+    "Wormeldange",
   ],
-  "Macedonia": [
+  Macedonia: [
     "Berovo",
     "Bitola",
     "Bogdanci",
@@ -43454,18 +43424,18 @@ export const countries = {
     "Struga",
     "Strumica",
     "Tetovo",
-    "Veles"
+    "Veles",
   ],
-  "Madagascar": [
+  Madagascar: [
     "Ambanja",
     "Antananarivo",
     "Antsirabe",
     "Antsiranana",
     "Fianarantsoa",
     "Toamasina",
-    "Toliara"
+    "Toliara",
   ],
-  "Malaysia": [
+  Malaysia: [
     "Alor Gajah",
     "Alor Star",
     "Ampang",
@@ -43739,9 +43709,9 @@ export const countries = {
     "Teronoh",
     "Tumpat",
     "Ulu Tiram",
-    "Victoria"
+    "Victoria",
   ],
-  "Malta": [
+  Malta: [
     "Attard",
     "Balzan",
     "Bingemma",
@@ -43807,9 +43777,9 @@ export const countries = {
     "Xewkija",
     "Zabbar",
     "Zejtun",
-    "Zurrieq"
+    "Zurrieq",
   ],
-  "Martinique": [
+  Martinique: [
     "Case-Pilote",
     "Ducos",
     "Fort-de-France",
@@ -43827,9 +43797,9 @@ export const countries = {
     "Sainte-Anne",
     "Sainte-Luce",
     "Sainte-Marie",
-    "Schoelcher"
+    "Schoelcher",
   ],
-  "Mauritius": [
+  Mauritius: [
     "Beau Bassin",
     "Chemin Grenier",
     "Ebene CyberCity",
@@ -43842,9 +43812,9 @@ export const countries = {
     "Rose Hill",
     "Saint Jean",
     "Tamarin",
-    "Vacoas"
+    "Vacoas",
   ],
-  "Mayotte": [
+  Mayotte: [
     "Bandaboa",
     "Chiconi",
     "Combani",
@@ -43856,9 +43826,9 @@ export const countries = {
     "Pamandzi",
     "Sada",
     "Tsingoni",
-    "Tsoundzou 1"
+    "Tsoundzou 1",
   ],
-  "Mexico": [
+  Mexico: [
     "Abasolo",
     "Acambaro",
     "Acambay",
@@ -44553,9 +44523,9 @@ export const countries = {
     "Zinapecuaro",
     "Zitlala",
     "Zongolica",
-    "Zumpango"
+    "Zumpango",
   ],
-  "Mongolia": [
+  Mongolia: [
     "Altai",
     "Arvayheer",
     "Baruun-Urt",
@@ -44576,9 +44546,9 @@ export const countries = {
     "Ulaan-Uul",
     "Ulan Bator",
     "Uliastay",
-    "Undurkhaan"
+    "Undurkhaan",
   ],
-  "Montenegro": [
+  Montenegro: [
     "Budva",
     "Crna Gora",
     "Herceg Novi",
@@ -44588,9 +44558,9 @@ export const countries = {
     "Pljevlja",
     "Podgorica",
     "Stari Bar",
-    "Ulcinj"
+    "Ulcinj",
   ],
-  "Morocco": [
+  Morocco: [
     "Afourer",
     "Agadir",
     "Ait Melloul",
@@ -44637,9 +44607,9 @@ export const countries = {
     "Temara",
     "Tiflet",
     "Tiznit",
-    "Touissite"
+    "Touissite",
   ],
-  "Mozambique": [
+  Mozambique: [
     "Beira",
     "Maputo",
     "Matola",
@@ -44647,7 +44617,7 @@ export const countries = {
     "Nampula",
     "Pemba",
     "Quelimane",
-    "Tete"
+    "Tete",
   ],
   "Myanmar [Burma]": [
     "Hlaing",
@@ -44655,9 +44625,9 @@ export const countries = {
     "Kyauktada",
     "Mandalay",
     "Wagan",
-    "Yangon"
+    "Yangon",
   ],
-  "Namibia": [
+  Namibia: [
     "Etunda",
     "Grootfontein",
     "Katima Mulilo",
@@ -44673,17 +44643,10 @@ export const countries = {
     "Swakopmund",
     "Tsumeb",
     "Walvis Bay",
-    "Windhoek"
+    "Windhoek",
   ],
-  "Nepal": [
-    "Bharatpur",
-    "Jawlakhel",
-    "Kathmandu",
-    "Lumbini",
-    "Palpa",
-    "Patan"
-  ],
-  "Netherlands": [
+  Nepal: ["Bharatpur", "Jawlakhel", "Kathmandu", "Lumbini", "Palpa", "Patan"],
+  Netherlands: [
     "Aagtekerke",
     "Aalburg",
     "Aalden",
@@ -46126,15 +46089,9 @@ export const countries = {
     "Zwartsluis",
     "Zwijndrecht",
     "Zwinderen",
-    "Zwolle"
+    "Zwolle",
   ],
-  "New Caledonia": [
-    "Dumbea",
-    "Mont-Dore",
-    "Noumea",
-    "Nouville",
-    "Paita"
-  ],
+  "New Caledonia": ["Dumbea", "Mont-Dore", "Noumea", "Nouville", "Paita"],
   "New Zealand": [
     "Ahaura",
     "Albany",
@@ -46413,9 +46370,9 @@ export const countries = {
     "Woodend",
     "Woolston",
     "Wyndham",
-    "Yaldhurst"
+    "Yaldhurst",
   ],
-  "Nicaragua": [
+  Nicaragua: [
     "Bluefields",
     "Chinandega",
     "El Panama",
@@ -46428,9 +46385,9 @@ export const countries = {
     "Matagalpa",
     "Ocotal",
     "Rivas",
-    "San Juan del Sur"
+    "San Juan del Sur",
   ],
-  "Nigeria": [
+  Nigeria: [
     "Aba",
     "Abakaliki",
     "Abeokuta",
@@ -46515,9 +46472,9 @@ export const countries = {
     "Warri",
     "Yaba",
     "Yola",
-    "Zaria"
+    "Zaria",
   ],
-  "Norway": [
+  Norway: [
     "Abelvaer",
     "Adalsbruk",
     "Adland",
@@ -47401,18 +47358,10 @@ export const countries = {
     "Voss",
     "Vossestrand",
     "Vraliosen",
-    "Ytre Alvik"
+    "Ytre Alvik",
   ],
-  "Oman": [
-    "Al Sohar",
-    "Muscat",
-    "Nizwa",
-    "Ruwi",
-    "Saham",
-    "Salalah",
-    "Samad"
-  ],
-  "Pakistan": [
+  Oman: ["Al Sohar", "Muscat", "Nizwa", "Ruwi", "Saham", "Salalah", "Samad"],
+  Pakistan: [
     "Abbottabad",
     "Attock",
     "Batgram",
@@ -47482,9 +47431,9 @@ export const countries = {
     "Toba Tek Singh",
     "Usman",
     "Wazirabad",
-    "Ziauddin"
+    "Ziauddin",
   ],
-  "Palestine": [
+  Palestine: [
     "Al Mawasi",
     "Bethlehem",
     "Gaza",
@@ -47492,9 +47441,9 @@ export const countries = {
     "Jenin",
     "Jericho",
     "Nablus",
-    "Ramallah"
+    "Ramallah",
   ],
-  "Panama": [
+  Panama: [
     "Aguadulce",
     "Albrook",
     "Ancon",
@@ -47566,7 +47515,7 @@ export const countries = {
     "Veraguas",
     "Victoria",
     "Vista Alegre",
-    "Vista Hermosa"
+    "Vista Hermosa",
   ],
   "Papua New Guinea": [
     "Aitape",
@@ -47595,9 +47544,9 @@ export const countries = {
     "Vanimo",
     "Wabag",
     "Waigani",
-    "Wewak"
+    "Wewak",
   ],
-  "Paraguay": [
+  Paraguay: [
     "Ayolas",
     "Boqueron",
     "Chore",
@@ -47624,9 +47573,9 @@ export const countries = {
     "Villa Elisa",
     "Villa Hayes",
     "Villarrica",
-    "Yataity"
+    "Yataity",
   ],
-  "Peru": [
+  Peru: [
     "Abancay",
     "Arequipa",
     "Ate",
@@ -47706,9 +47655,9 @@ export const countries = {
     "Trujillo",
     "Tumbes",
     "Ventanilla",
-    "Victoria"
+    "Victoria",
   ],
-  "Philippines": [
+  Philippines: [
     "Abucay",
     "Acacia",
     "Aguilar",
@@ -48076,9 +48025,9 @@ export const countries = {
     "West",
     "West Triangle",
     "Wines",
-    "Zamboanga City"
+    "Zamboanga City",
   ],
-  "Poland": [
+  Poland: [
     "Adama",
     "Alwernia",
     "Andrespol",
@@ -49679,9 +49628,9 @@ export const countries = {
     "Zukowo",
     "Zurawica",
     "Zwolen",
-    "Zyrakow"
+    "Zyrakow",
   ],
-  "Portugal": [
+  Portugal: [
     "Abobada",
     "Abrantes",
     "Acores",
@@ -50354,7 +50303,7 @@ export const countries = {
     "Viseu",
     "Vizela",
     "Zambujal",
-    "Zibreira"
+    "Zibreira",
   ],
   "Puerto Rico": [
     "Adjuntas",
@@ -50443,7 +50392,7 @@ export const countries = {
     "Vieques",
     "Villalba",
     "Yabucoa",
-    "Yauco"
+    "Yauco",
   ],
   "Republic of Korea": [
     "Andong",
@@ -50538,7 +50487,7 @@ export const countries = {
     "Yeoju",
     "Yeosu",
     "Yongin",
-    "Yongsan-dong"
+    "Yongsan-dong",
   ],
   "Republic of Lithuania": [
     "Alytus",
@@ -50563,7 +50512,7 @@ export const countries = {
     "Vievis",
     "Vilniaus Apskritis",
     "Vilnius",
-    "Visaginas"
+    "Visaginas",
   ],
   "Republic of Moldova": [
     "Anenii Noi",
@@ -50584,9 +50533,9 @@ export const countries = {
     "Tighina",
     "Tiraspol",
     "Voinescu",
-    "Vulcanesti"
+    "Vulcanesti",
   ],
-  "Romania": [
+  Romania: [
     "Adjud",
     "Afumati",
     "Agnita",
@@ -50934,9 +50883,9 @@ export const countries = {
     "Voluntari",
     "Voronet",
     "Zetea",
-    "Zimnicea"
+    "Zimnicea",
   ],
-  "Russia": [
+  Russia: [
     "Abakan",
     "Abinsk",
     "Achinsk",
@@ -51940,7 +51889,7 @@ export const countries = {
     "Zubovo",
     "Zvenigorod",
     "Zvenigovo",
-    "Zvezda"
+    "Zvezda",
   ],
   "Saint Lucia": [
     "Anse La Raye",
@@ -51948,14 +51897,14 @@ export const countries = {
     "Choiseul",
     "Dauphin",
     "Gros Islet",
-    "Vieux Fort"
+    "Vieux Fort",
   ],
   "San Marino": [
     "Acquaviva",
     "Falciano",
     "Fiorentino",
     "San Marino",
-    "Serravalle"
+    "Serravalle",
   ],
   "Saudi Arabia": [
     "Abha",
@@ -51995,9 +51944,9 @@ export const countries = {
     "Sambah",
     "Sayhat",
     "Tabuk",
-    "Yanbu` al Bahr"
+    "Yanbu` al Bahr",
   ],
-  "Senegal": [
+  Senegal: [
     "Boussinki",
     "Camberene",
     "Dakar",
@@ -52009,9 +51958,9 @@ export const countries = {
     "Madina Kokoun",
     "Saint-Louis",
     "Sama",
-    "Tanaf"
+    "Tanaf",
   ],
-  "Serbia": [
+  Serbia: [
     "Ada",
     "Aleksinac",
     "Apatin",
@@ -52104,9 +52053,9 @@ export const countries = {
     "Zajecar",
     "Zemun Polje",
     "Zlatibor",
-    "Zrenjanin"
+    "Zrenjanin",
   ],
-  "Singapore": [
+  Singapore: [
     "Ang Mo Kio New Town",
     "Ayer Raja New Town",
     "Bedok New Town",
@@ -52140,9 +52089,9 @@ export const countries = {
     "Toa Payoh New Town",
     "Woodlands New Town",
     "Yew Tee",
-    "Yishun New Town"
+    "Yishun New Town",
   ],
-  "Slovakia": [
+  Slovakia: [
     "Bahon",
     "Baka",
     "Banovce nad Bebravou",
@@ -52372,9 +52321,9 @@ export const countries = {
     "Zikava",
     "Zlate",
     "Zuberec",
-    "Zvolen"
+    "Zvolen",
   ],
-  "Slovenia": [
+  Slovenia: [
     "Ankaran",
     "Begunje na Gorenjskem",
     "Beltinci",
@@ -52526,7 +52475,7 @@ export const countries = {
     "Zgornje Hoce",
     "Zgornje Skofije",
     "Zidani Most",
-    "Ziri"
+    "Ziri",
   ],
   "South Africa": [
     "Alberton",
@@ -52839,7 +52788,7 @@ export const countries = {
     "Waverley",
     "Welgelegen",
     "Welgemoed",
-     "Welkom",
+    "Welkom",
     "Wellington",
     "Weltevreden",
     "Weltevreedenpark",
@@ -52853,9 +52802,9 @@ export const countries = {
     "Wonderboom",
     "Worcester",
     "Wynberg",
-    "Zeerust"
+    "Zeerust",
   ],
-  "Spain": [
+  Spain: [
     "A Cidade",
     "A Estrada",
     "A Pobra do Caraminal",
@@ -55263,7 +55212,7 @@ export const countries = {
     "Zubiri",
     "Zuera",
     "Zumaia",
-    "Zumarraga"
+    "Zumarraga",
   ],
   "Sri Lanka": [
     "Badulla",
@@ -55302,17 +55251,10 @@ export const countries = {
     "Sri Jayewardenepura Kotte",
     "Talapathpitiya",
     "Wattala",
-    "Wellampitiya"
+    "Wellampitiya",
   ],
-  "Sudan": [
-    "Kassala",
-    "Khartoum",
-    "Nyala",
-    "Shendi",
-    "Thabit",
-    "Umm Durman"
-  ],
-  "Suriname": [
+  Sudan: ["Kassala", "Khartoum", "Nyala", "Shendi", "Thabit", "Umm Durman"],
+  Suriname: [
     "Botopasi",
     "Brownsweg",
     "Friendship",
@@ -55321,16 +55263,10 @@ export const countries = {
     "Nieuw Amsterdam",
     "Onverwacht",
     "Paramaribo",
-    "Totness"
+    "Totness",
   ],
-  "Swaziland": [
-    "Kwaluseni",
-    "Lobamba",
-    "Manzini",
-    "Mbabane",
-    "Piggs Peak"
-  ],
-  "Sweden": [
+  Swaziland: ["Kwaluseni", "Lobamba", "Manzini", "Mbabane", "Piggs Peak"],
+  Sweden: [
     "Aby",
     "AElmhult",
     "AElvdalen",
@@ -56540,9 +56476,9 @@ export const countries = {
     "Yngsjo",
     "Ystad",
     "Ytterby",
-    "Zinkgruvan"
+    "Zinkgruvan",
   ],
-  "Switzerland": [
+  Switzerland: [
     "Aadorf",
     "Aarau",
     "Aarberg",
@@ -57831,9 +57767,9 @@ export const countries = {
     "Zurich",
     "Zuzgen",
     "Zuzwil",
-    "Zwingen"
+    "Zwingen",
   ],
-  "Taiwan": [
+  Taiwan: [
     "Budai",
     "Caogang",
     "Chang-hua",
@@ -57899,9 +57835,9 @@ export const countries = {
     "Yunlin County",
     "Zhubei",
     "Zhunan",
-    "Zhuqi"
+    "Zhuqi",
   ],
-  "Tanzania": [
+  Tanzania: [
     "Arusha",
     "Bukoba",
     "Dar es Salaam",
@@ -57911,9 +57847,9 @@ export const countries = {
     "Njombe",
     "Raha",
     "Tanga",
-    "Zanzibar"
+    "Zanzibar",
   ],
-  "Thailand": [
+  Thailand: [
     "Amnat Charoen",
     "Amphawa",
     "Amphoe Aranyaprathet",
@@ -58078,7 +58014,7 @@ export const countries = {
     "Watthana",
     "Wiphawadi",
     "Yala",
-    "Yasothon"
+    "Yasothon",
   ],
   "Trinidad and Tobago": [
     "Arima",
@@ -58129,9 +58065,9 @@ export const countries = {
     "Valsayn",
     "Victoria",
     "Ward of Tacarigua",
-    "Woodbrook"
+    "Woodbrook",
   ],
-  "Tunisia": [
+  Tunisia: [
     "Ariana",
     "Beja",
     "Gafsa",
@@ -58143,9 +58079,9 @@ export const countries = {
     "Sfax",
     "Sidi Bouzid",
     "Sousse",
-    "Tunis"
+    "Tunis",
   ],
-  "Turkey": [
+  Turkey: [
     "Abdullah",
     "Acibadem",
     "Ada",
@@ -58422,16 +58358,16 @@ export const countries = {
     "Yuregir",
     "Zekeriya",
     "Zeytinburnu",
-    "Zonguldak"
+    "Zonguldak",
   ],
   "U.S. Virgin Islands": [
     "Charlotte Amalie",
     "Christiansted",
     "Frederiksted",
     "Kingshill",
-    "St John Island"
+    "St John Island",
   ],
-  "Ukraine": [
+  Ukraine: [
     "Aleksandriya",
     "Aleksandrovka",
     "Alekseyevo-Druzhkovka",
@@ -58658,7 +58594,7 @@ export const countries = {
     "Zlazne",
     "Zmiyiv",
     "Zolochiv",
-    "Zolotonosha"
+    "Zolotonosha",
   ],
   "United Arab Emirates": [
     "Abu Dhabi",
@@ -58670,7 +58606,7 @@ export const countries = {
     "Dubai",
     "Fujairah",
     "Ras al-Khaimah",
-    "Sharjah"
+    "Sharjah",
   ],
   "United Kingdom": [
     "Abberton",
@@ -61615,7 +61551,7 @@ export const countries = {
     "Ystalyfera",
     "Ystrad Mynach",
     "Ystradgynlais",
-    "Zeals"
+    "Zeals",
   ],
   "United States": [
     "Abbeville",
@@ -61844,7 +61780,7 @@ export const countries = {
     "Amberg",
     "Ambler",
     "Amboy",
-   "Ambridge",
+    "Ambridge",
     "Ambrose",
     "Amelia",
     "Amelia Court House",
@@ -75685,7 +75621,7 @@ export const countries = {
     "Riverhead",
     "Riverside",
     "Riverside County",
-    "Riverton",   
+    "Riverton",
     "Riverview",
     "Rives",
     "Rives Junction",
@@ -76377,7 +76313,7 @@ export const countries = {
     "Searcy",
     "Searsboro",
     "Searsmont",
-    "Seaside", 
+    "Seaside",
     "Seaside Heights",
     "Seaside Park",
     "Seaton",
@@ -79053,9 +78989,9 @@ export const countries = {
     "Zumbrota",
     "Zuni",
     "Zurich",
-    "Zwingle"
+    "Zwingle",
   ],
-  "Uruguay": [
+  Uruguay: [
     "Barra de Carrasco",
     "Canelones",
     "Colonia del Sacramento",
@@ -79071,9 +79007,9 @@ export const countries = {
     "Salto",
     "San Carlos",
     "Toledo",
-    "Union"
+    "Union",
   ],
-  "Venezuela": [
+  Venezuela: [
     "Acarigua",
     "Anaco",
     "Araure",
@@ -79163,9 +79099,9 @@ export const countries = {
     "Valencia",
     "Valera",
     "Valle",
-    "Vargas"
+    "Vargas",
   ],
-  "Vietnam": [
+  Vietnam: [
     "An Dinh",
     "An Giang",
     "An Nhon",
@@ -79277,9 +79213,9 @@ export const countries = {
     "Xom Thang",
     "Xom Truong Dinh",
     "Yen Bai",
-    "Yen Thanh"
+    "Yen Thanh",
   ],
-  "Zambia": [
+  Zambia: [
     "Kalomo",
     "Kitwe",
     "Livingstone",
@@ -79288,9 +79224,9 @@ export const countries = {
     "Mumbwa",
     "Ndola",
     "Siavonga",
-    "Solwezi"
+    "Solwezi",
   ],
-  "Zimbabwe": [
+  Zimbabwe: [
     "Bulawayo",
     "Chinhoyi",
     "Greendale",
@@ -79299,1187 +79235,1367 @@ export const countries = {
     "Kwekwe",
     "Mufakose",
     "Mutare",
-    "Victoria Falls"
-  ]
-}
+    "Victoria Falls",
+  ],
+};
 export const jobCategories = [
-    {
-        "Name": "Accounting",
-        "Code": "5001",
-        "SubCategories": [
-            {
-                "Name": "Accountants",
-                "Code": "5002",
-                "SubCategories": null
-            },
-            {
-                "Name": "Accounts administrators",
-                "Code": "5007",
-                "SubCategories": null
-            },
-            {
-                "Name": "Accounts payable",
-                "Code": "5004",
-                "SubCategories": null
-            },
-            {
-                "Name": "Accounts receivable",
-                "Code": "5005",
-                "SubCategories": null
-            },
-            {
-                "Name": "Analysts",
-                "Code": "6889",
-                "SubCategories": null
-            },
-            {
-                "Name": "Finance managers & controllers",
-                "Code": "5009",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5011",
-                "SubCategories": null
-            },
-            {
-                "Name": "Payroll",
-                "Code": "5012",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5014",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Agriculture, fishing & forestry",
-        "Code": "5015",
-        "SubCategories": [
-            {
-                "Name": "Farming",
-                "Code": "5016",
-                "SubCategories": null
-            },
-            {
-                "Name": "Fishing",
-                "Code": "5017",
-                "SubCategories": null
-            },
-            {
-                "Name": "Forestry",
-                "Code": "5018",
-                "SubCategories": null
-            },
-            {
-                "Name": "Horticulture",
-                "Code": "5019",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5020",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Architecture",
-        "Code": "5309",
-        "SubCategories": [
-            {
-                "Name": "Architects",
-                "Code": "5034",
-                "SubCategories": null
-            },
-            {
-                "Name": "Drafting",
-                "Code": "5035",
-                "SubCategories": null
-            },
-            {
-                "Name": "Interior design",
-                "Code": "5037",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5310",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Automotive",
-        "Code": "4959",
-        "SubCategories": [
-            {
-                "Name": "Automotive technician",
-                "Code": "4960",
-                "SubCategories": null
-            },
-            {
-                "Name": "Diesel mechanic",
-                "Code": "4961",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "4962",
-                "SubCategories": null
-            },
-            {
-                "Name": "Panel & paint",
-                "Code": "4963",
-                "SubCategories": null
-            },
-            {
-                "Name": "Sales, operations & parts",
-                "Code": "4964",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5181",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Banking, finance & insurance",
-        "Code": "5021",
-        "SubCategories": [
-            {
-                "Name": "Analysts",
-                "Code": "5022",
-                "SubCategories": null
-            },
-            {
-                "Name": "Client services",
-                "Code": "5024",
-                "SubCategories": null
-            },
-            {
-                "Name": "Corporate & institutional banking",
-                "Code": "5025",
-                "SubCategories": null
-            },
-            {
-                "Name": "Credit & lending",
-                "Code": "5026",
-                "SubCategories": null
-            },
-            {
-                "Name": "Financial planning & investment",
-                "Code": "5027",
-                "SubCategories": null
-            },
-            {
-                "Name": "Insurance",
-                "Code": "5029",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5030",
-                "SubCategories": null
-            },
-            {
-                "Name": "Risk & compliance",
-                "Code": "0674",
-                "SubCategories": null
-            },
-            {
-                "Name": "Settlements",
-                "Code": "6890",
-                "SubCategories": null
-            },
-            {
-                "Name": "Tellers & branch staff",
-                "Code": "5023",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5032",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Construction & roading",
-        "Code": "5033",
-        "SubCategories": [
-            {
-                "Name": "Estimation",
-                "Code": "5036",
-                "SubCategories": null
-            },
-            {
-                "Name": "Health & safety",
-                "Code": "4957",
-                "SubCategories": null
-            },
-            {
-                "Name": "Labouring",
-                "Code": "5039",
-                "SubCategories": null
-            },
-            {
-                "Name": "Machine operators",
-                "Code": "6891",
-                "SubCategories": null
-            },
-            {
-                "Name": "Planning",
-                "Code": "5038",
-                "SubCategories": null
-            },
-            {
-                "Name": "Project & contracts management",
-                "Code": "5040",
-                "SubCategories": null
-            },
-            {
-                "Name": "Quantity surveying",
-                "Code": "0728",
-                "SubCategories": null
-            },
-            {
-                "Name": "Traffic management",
-                "Code": "5311",
-                "SubCategories": null
-            },
-            {
-                "Name": "Site management",
-                "Code": "5041",
-                "SubCategories": null
-            },
-            {
-                "Name": "Supervisors & forepersons",
-                "Code": "5042",
-                "SubCategories": null
-            },
-            {
-                "Name": "Surveying",
-                "Code": "5043",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5044",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Customer service",
-        "Code": "5045",
-        "SubCategories": [
-            {
-                "Name": "Call centre",
-                "Code": "0733",
-                "SubCategories": null
-            },
-            {
-                "Name": "Customer-facing",
-                "Code": "5046",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5047",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5049",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Education",
-        "Code": "5050",
-        "SubCategories": [
-            {
-                "Name": "Au pairs & nannies",
-                "Code": "0748",
-                "SubCategories": null
-            },
-            {
-                "Name": "Early childhood",
-                "Code": "5051",
-                "SubCategories": null
-            },
-            {
-                "Name": "Primary",
-                "Code": "5052",
-                "SubCategories": null
-            },
-            {
-                "Name": "Secondary",
-                "Code": "5053",
-                "SubCategories": null
-            },
-            {
-                "Name": "Tertiary",
-                "Code": "5054",
-                "SubCategories": null
-            },
-            {
-                "Name": "Tutoring & training",
-                "Code": "6894",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5055",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Engineering",
-        "Code": "5056",
-        "SubCategories": [
-            {
-                "Name": "Building services",
-                "Code": "5057",
-                "SubCategories": null
-            },
-            {
-                "Name": "Civil & structural",
-                "Code": "5058",
-                "SubCategories": null
-            },
-            {
-                "Name": "Drafting",
-                "Code": "5059",
-                "SubCategories": null
-            },
-            {
-                "Name": "Electrical",
-                "Code": "5060",
-                "SubCategories": null
-            },
-            {
-                "Name": "Energy",
-                "Code": "6895",
-                "SubCategories": null
-            },
-            {
-                "Name": "Environmental",
-                "Code": "5061",
-                "SubCategories": null
-            },
-            {
-                "Name": "Geotechnical",
-                "Code": "0749",
-                "SubCategories": null
-            },
-            {
-                "Name": "Industrial",
-                "Code": "6896",
-                "SubCategories": null
-            },
-            {
-                "Name": "Maintenance",
-                "Code": "5062",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5063",
-                "SubCategories": null
-            },
-            {
-                "Name": "Mechanical",
-                "Code": "5064",
-                "SubCategories": null
-            },
-            {
-                "Name": "Project management",
-                "Code": "5065",
-                "SubCategories": null
-            },
-            {
-                "Name": "Water & waste",
-                "Code": "5066",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5067",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Executive & general management",
-        "Code": "9831",
-        "SubCategories": []
-    },
-    {
-        "Name": "Government & council",
-        "Code": "5077",
-        "SubCategories": [
-            {
-                "Name": "Central government",
-                "Code": "5079",
-                "SubCategories": null
-            },
-            {
-                "Name": "Defence",
-                "Code": "5080",
-                "SubCategories": null
-            },
-            {
-                "Name": "Local & regional council",
-                "Code": "5078",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5081",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Healthcare",
-        "Code": "5082",
-        "SubCategories": [
-            {
-                "Name": "Administration",
-                "Code": "5083",
-                "SubCategories": null
-            },
-            {
-                "Name": "Caregiving",
-                "Code": "5084",
-                "SubCategories": null
-            },
-            {
-                "Name": "Community & social services",
-                "Code": "5085",
-                "SubCategories": null
-            },
-            {
-                "Name": "Dentistry",
-                "Code": "5086",
-                "SubCategories": null
-            },
-            {
-                "Name": "Doctors & specialists",
-                "Code": "5087",
-                "SubCategories": null
-            },
-            {
-                "Name": "Fitness & wellbeing",
-                "Code": "0751",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5088",
-                "SubCategories": null
-            },
-            {
-                "Name": "Nursing & midwifery",
-                "Code": "5090",
-                "SubCategories": null
-            },
-            {
-                "Name": "Occupational therapy",
-                "Code": "5091",
-                "SubCategories": null
-            },
-            {
-                "Name": "Pharmacy",
-                "Code": "5092",
-                "SubCategories": null
-            },
-            {
-                "Name": "Physiotherapy",
-                "Code": "5093",
-                "SubCategories": null
-            },
-            {
-                "Name": "Psychology & counselling",
-                "Code": "5094",
-                "SubCategories": null
-            },
-            {
-                "Name": "Radiography & sonography",
-                "Code": "5095",
-                "SubCategories": null
-            },
-            {
-                "Name": "Veterinary",
-                "Code": "0752",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5096",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Hospitality & tourism",
-        "Code": "5097",
-        "SubCategories": [
-            {
-                "Name": "Bar staff & baristas",
-                "Code": "5098",
-                "SubCategories": null
-            },
-            {
-                "Name": "Chefs",
-                "Code": "5100",
-                "SubCategories": null
-            },
-            {
-                "Name": "Housekeeping",
-                "Code": "6897",
-                "SubCategories": null
-            },
-            {
-                "Name": "Kitchen staff",
-                "Code": "5102",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5103",
-                "SubCategories": null
-            },
-            {
-                "Name": "Reception & front desk",
-                "Code": "5101",
-                "SubCategories": null
-            },
-            {
-                "Name": "Tourism & tour guides",
-                "Code": "0755",
-                "SubCategories": null
-            },
-            {
-                "Name": "Travel consultants",
-                "Code": "5104",
-                "SubCategories": null
-            },
-            {
-                "Name": "Waiting staff",
-                "Code": "5099",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5105",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "HR & recruitment",
-        "Code": "5106",
-        "SubCategories": [
-            {
-                "Name": "Health & safety",
-                "Code": "4958",
-                "SubCategories": null
-            },
-            {
-                "Name": "HR",
-                "Code": "5107",
-                "SubCategories": null
-            },
-            {
-                "Name": "Recruitment",
-                "Code": "5110",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5111",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "IT",
-        "Code": "5112",
-        "SubCategories": [
-            {
-                "Name": "Architects",
-                "Code": "5113",
-                "SubCategories": null
-            },
-            {
-                "Name": "Business & systems analysts",
-                "Code": "5114",
-                "SubCategories": null
-            },
-            {
-                "Name": "Data warehousing & BI",
-                "Code": "0759",
-                "SubCategories": null
-            },
-            {
-                "Name": "Database",
-                "Code": "5115",
-                "SubCategories": null
-            },
-            {
-                "Name": "Functional consultants",
-                "Code": "6898",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5117",
-                "SubCategories": null
-            },
-            {
-                "Name": "Networking & storage",
-                "Code": "5118",
-                "SubCategories": null
-            },
-            {
-                "Name": "Programming & development",
-                "Code": "5119",
-                "SubCategories": null
-            },
-            {
-                "Name": "Project management",
-                "Code": "5120",
-                "SubCategories": null
-            },
-            {
-                "Name": "Sales & pre-sales",
-                "Code": "5121",
-                "SubCategories": null
-            },
-            {
-                "Name": "Security",
-                "Code": "6899",
-                "SubCategories": null
-            },
-            {
-                "Name": "Service desk",
-                "Code": "5116",
-                "SubCategories": null
-            },
-            {
-                "Name": "Systems engineers",
-                "Code": "0761",
-                "SubCategories": null
-            },
-            {
-                "Name": "Telecommunications",
-                "Code": "5122",
-                "SubCategories": null
-            },
-            {
-                "Name": "Testing",
-                "Code": "5123",
-                "SubCategories": null
-            },
-            {
-                "Name": "Training",
-                "Code": "6900",
-                "SubCategories": null
-            },
-            {
-                "Name": "Web design",
-                "Code": "5124",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5125",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Legal",
-        "Code": "5126",
-        "SubCategories": [
-            {
-                "Name": "In-house counsel",
-                "Code": "5129",
-                "SubCategories": null
-            },
-            {
-                "Name": "Private practice",
-                "Code": "5130",
-                "SubCategories": null
-            },
-            {
-                "Name": "Secretarial",
-                "Code": "5127",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5131",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Manufacturing & operations",
-        "Code": "5132",
-        "SubCategories": [
-            {
-                "Name": "Fitters & machining",
-                "Code": "5133",
-                "SubCategories": null
-            },
-            {
-                "Name": "Machine operation",
-                "Code": "5135",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5136",
-                "SubCategories": null
-            },
-            {
-                "Name": "Process & assembly",
-                "Code": "5138",
-                "SubCategories": null
-            },
-            {
-                "Name": "Purchasing & inventory",
-                "Code": "5139",
-                "SubCategories": null
-            },
-            {
-                "Name": "Quality assurance",
-                "Code": "5140",
-                "SubCategories": null
-            },
-            {
-                "Name": "Storepersons & warehousing",
-                "Code": "5141",
-                "SubCategories": null
-            },
-            {
-                "Name": "Supervisors & forepersons",
-                "Code": "6901",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5142",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Marketing, media & communications",
-        "Code": "5143",
-        "SubCategories": [
-            {
-                "Name": "Advertising",
-                "Code": "0763",
-                "SubCategories": null
-            },
-            {
-                "Name": "Brand & product management",
-                "Code": "5145",
-                "SubCategories": null
-            },
-            {
-                "Name": "Communications & PR",
-                "Code": "5150",
-                "SubCategories": null
-            },
-            {
-                "Name": "Design",
-                "Code": "5146",
-                "SubCategories": null
-            },
-            {
-                "Name": "Digital marketing",
-                "Code": "0764",
-                "SubCategories": null
-            },
-            {
-                "Name": "Direct marketing",
-                "Code": "5147",
-                "SubCategories": null
-            },
-            {
-                "Name": "Journalism",
-                "Code": "5153",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5151",
-                "SubCategories": null
-            },
-            {
-                "Name": "Market research & analysis",
-                "Code": "5148",
-                "SubCategories": null
-            },
-            {
-                "Name": "Marketing assistants & coordinators",
-                "Code": "5149",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5154",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Office & administration",
-        "Code": "5155",
-        "SubCategories": [
-            {
-                "Name": "Administration",
-                "Code": "5156",
-                "SubCategories": null
-            },
-            {
-                "Name": "Data entry",
-                "Code": "5157",
-                "SubCategories": null
-            },
-            {
-                "Name": "EA, PA & secretarial",
-                "Code": "5159",
-                "SubCategories": null
-            },
-            {
-                "Name": "Office management",
-                "Code": "5158",
-                "SubCategories": null
-            },
-            {
-                "Name": "Reception",
-                "Code": "5160",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5162",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Property",
-        "Code": "0810",
-        "SubCategories": [
-            {
-                "Name": "Commercial sales & leasing",
-                "Code": "0821",
-                "SubCategories": null
-            },
-            {
-                "Name": "Consultancy & valuation",
-                "Code": "0840",
-                "SubCategories": null
-            },
-            {
-                "Name": "Facilities & commercial property management",
-                "Code": "0883",
-                "SubCategories": null
-            },
-            {
-                "Name": "Residential sales & management",
-                "Code": "0897",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "0898",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Retail",
-        "Code": "5171",
-        "SubCategories": [
-            {
-                "Name": "Area managers",
-                "Code": "0765",
-                "SubCategories": null
-            },
-            {
-                "Name": "Buying",
-                "Code": "0766",
-                "SubCategories": null
-            },
-            {
-                "Name": "Department managers",
-                "Code": "0768",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5174",
-                "SubCategories": null
-            },
-            {
-                "Name": "Merchandising",
-                "Code": "5173",
-                "SubCategories": null
-            },
-            {
-                "Name": "Retail assistants",
-                "Code": "5175",
-                "SubCategories": null
-            },
-            {
-                "Name": "Store managers",
-                "Code": "5176",
-                "SubCategories": null
-            },
-            {
-                "Name": "Assistant store managers",
-                "Code": "5177",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5178",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Sales",
-        "Code": "5163",
-        "SubCategories": [
-            {
-                "Name": "Account management",
-                "Code": "5164",
-                "SubCategories": null
-            },
-            {
-                "Name": "Business development manager",
-                "Code": "5165",
-                "SubCategories": null
-            },
-            {
-                "Name": "Sales managers",
-                "Code": "5166",
-                "SubCategories": null
-            },
-            {
-                "Name": "Sales reps",
-                "Code": "5167",
-                "SubCategories": null
-            },
-            {
-                "Name": "Sales support",
-                "Code": "5168",
-                "SubCategories": null
-            },
-            {
-                "Name": "Telesales",
-                "Code": "5169",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5170",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Science & technology",
-        "Code": "5179",
-        "SubCategories": []
-    },
-    {
-        "Name": "Trades & services",
-        "Code": "5180",
-        "SubCategories": [
-            {
-                "Name": "Air con. & refrigeration",
-                "Code": "5182",
-                "SubCategories": null
-            },
-            {
-                "Name": "Beautician",
-                "Code": "6902",
-                "SubCategories": null
-            },
-            {
-                "Name": "Boat building",
-                "Code": "6903",
-                "SubCategories": null
-            },
-            {
-                "Name": "Boilermakers & welders",
-                "Code": "5184",
-                "SubCategories": null
-            },
-            {
-                "Name": "Building & carpentry",
-                "Code": "5186",
-                "SubCategories": null
-            },
-            {
-                "Name": "Butchers & bakers",
-                "Code": "5185",
-                "SubCategories": null
-            },
-            {
-                "Name": "Cleaning",
-                "Code": "5187",
-                "SubCategories": null
-            },
-            {
-                "Name": "Electrical",
-                "Code": "5188",
-                "SubCategories": null
-            },
-            {
-                "Name": "Flooring",
-                "Code": "6904",
-                "SubCategories": null
-            },
-            {
-                "Name": "Gardening & landscaping",
-                "Code": "5189",
-                "SubCategories": null
-            },
-            {
-                "Name": "Glaziers",
-                "Code": "6905",
-                "SubCategories": null
-            },
-            {
-                "Name": "Hairdressing",
-                "Code": "5190",
-                "SubCategories": null
-            },
-            {
-                "Name": "Handy-persons",
-                "Code": "5191",
-                "SubCategories": null
-            },
-            {
-                "Name": "Labourers",
-                "Code": "5192",
-                "SubCategories": null
-            },
-            {
-                "Name": "Painting",
-                "Code": "5193",
-                "SubCategories": null
-            },
-            {
-                "Name": "Plumbing",
-                "Code": "5194",
-                "SubCategories": null
-            },
-            {
-                "Name": "Printing",
-                "Code": "5195",
-                "SubCategories": null
-            },
-            {
-                "Name": "Roofing",
-                "Code": "6906",
-                "SubCategories": null
-            },
-            {
-                "Name": "Security",
-                "Code": "5196",
-                "SubCategories": null
-            },
-            {
-                "Name": "Sign writers",
-                "Code": "6907",
-                "SubCategories": null
-            },
-            {
-                "Name": "Technicians",
-                "Code": "5197",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5198",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Transport & logistics",
-        "Code": "5068",
-        "SubCategories": [
-            {
-                "Name": "Drivers & couriers",
-                "Code": "5069",
-                "SubCategories": null
-            },
-            {
-                "Name": "Freight forwarders",
-                "Code": "5070",
-                "SubCategories": null
-            },
-            {
-                "Name": "Import & export",
-                "Code": "5075",
-                "SubCategories": null
-            },
-            {
-                "Name": "Management",
-                "Code": "5072",
-                "SubCategories": null
-            },
-            {
-                "Name": "Operations",
-                "Code": "5071",
-                "SubCategories": null
-            },
-            {
-                "Name": "Supply chain & planning",
-                "Code": "5073",
-                "SubCategories": null
-            },
-            {
-                "Name": "Warehouse & distribution",
-                "Code": "5074",
-                "SubCategories": null
-            },
-            {
-                "Name": "Other",
-                "Code": "5076",
-                "SubCategories": null
-            }
-        ]
-    },
-    {
-        "Name": "Other",
-        "Code": "5199",
-        "SubCategories": []
-    }
+  {
+    Name: "Accounting",
+    Code: "5001",
+    SubCategories: [
+      {
+        Name: "Accountants",
+        Code: "5002",
+        SubCategories: null,
+      },
+      {
+        Name: "Accounts administrators",
+        Code: "5007",
+        SubCategories: null,
+      },
+      {
+        Name: "Accounts payable",
+        Code: "5004",
+        SubCategories: null,
+      },
+      {
+        Name: "Accounts receivable",
+        Code: "5005",
+        SubCategories: null,
+      },
+      {
+        Name: "Analysts",
+        Code: "6889",
+        SubCategories: null,
+      },
+      {
+        Name: "Finance managers & controllers",
+        Code: "5009",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5011",
+        SubCategories: null,
+      },
+      {
+        Name: "Payroll",
+        Code: "5012",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5014",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Agriculture, fishing & forestry",
+    Code: "5015",
+    SubCategories: [
+      {
+        Name: "Farming",
+        Code: "5016",
+        SubCategories: null,
+      },
+      {
+        Name: "Fishing",
+        Code: "5017",
+        SubCategories: null,
+      },
+      {
+        Name: "Forestry",
+        Code: "5018",
+        SubCategories: null,
+      },
+      {
+        Name: "Horticulture",
+        Code: "5019",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5020",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Architecture",
+    Code: "5309",
+    SubCategories: [
+      {
+        Name: "Architects",
+        Code: "5034",
+        SubCategories: null,
+      },
+      {
+        Name: "Drafting",
+        Code: "5035",
+        SubCategories: null,
+      },
+      {
+        Name: "Interior design",
+        Code: "5037",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5310",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Automotive",
+    Code: "4959",
+    SubCategories: [
+      {
+        Name: "Automotive technician",
+        Code: "4960",
+        SubCategories: null,
+      },
+      {
+        Name: "Diesel mechanic",
+        Code: "4961",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "4962",
+        SubCategories: null,
+      },
+      {
+        Name: "Panel & paint",
+        Code: "4963",
+        SubCategories: null,
+      },
+      {
+        Name: "Sales, operations & parts",
+        Code: "4964",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5181",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Banking, finance & insurance",
+    Code: "5021",
+    SubCategories: [
+      {
+        Name: "Analysts",
+        Code: "5022",
+        SubCategories: null,
+      },
+      {
+        Name: "Client services",
+        Code: "5024",
+        SubCategories: null,
+      },
+      {
+        Name: "Corporate & institutional banking",
+        Code: "5025",
+        SubCategories: null,
+      },
+      {
+        Name: "Credit & lending",
+        Code: "5026",
+        SubCategories: null,
+      },
+      {
+        Name: "Financial planning & investment",
+        Code: "5027",
+        SubCategories: null,
+      },
+      {
+        Name: "Insurance",
+        Code: "5029",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5030",
+        SubCategories: null,
+      },
+      {
+        Name: "Risk & compliance",
+        Code: "0674",
+        SubCategories: null,
+      },
+      {
+        Name: "Settlements",
+        Code: "6890",
+        SubCategories: null,
+      },
+      {
+        Name: "Tellers & branch staff",
+        Code: "5023",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5032",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Construction & roading",
+    Code: "5033",
+    SubCategories: [
+      {
+        Name: "Estimation",
+        Code: "5036",
+        SubCategories: null,
+      },
+      {
+        Name: "Health & safety",
+        Code: "4957",
+        SubCategories: null,
+      },
+      {
+        Name: "Labouring",
+        Code: "5039",
+        SubCategories: null,
+      },
+      {
+        Name: "Machine operators",
+        Code: "6891",
+        SubCategories: null,
+      },
+      {
+        Name: "Planning",
+        Code: "5038",
+        SubCategories: null,
+      },
+      {
+        Name: "Project & contracts management",
+        Code: "5040",
+        SubCategories: null,
+      },
+      {
+        Name: "Quantity surveying",
+        Code: "0728",
+        SubCategories: null,
+      },
+      {
+        Name: "Traffic management",
+        Code: "5311",
+        SubCategories: null,
+      },
+      {
+        Name: "Site management",
+        Code: "5041",
+        SubCategories: null,
+      },
+      {
+        Name: "Supervisors & forepersons",
+        Code: "5042",
+        SubCategories: null,
+      },
+      {
+        Name: "Surveying",
+        Code: "5043",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5044",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Customer service",
+    Code: "5045",
+    SubCategories: [
+      {
+        Name: "Call centre",
+        Code: "0733",
+        SubCategories: null,
+      },
+      {
+        Name: "Customer-facing",
+        Code: "5046",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5047",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5049",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Education",
+    Code: "5050",
+    SubCategories: [
+      {
+        Name: "Au pairs & nannies",
+        Code: "0748",
+        SubCategories: null,
+      },
+      {
+        Name: "Early childhood",
+        Code: "5051",
+        SubCategories: null,
+      },
+      {
+        Name: "Primary",
+        Code: "5052",
+        SubCategories: null,
+      },
+      {
+        Name: "Secondary",
+        Code: "5053",
+        SubCategories: null,
+      },
+      {
+        Name: "Tertiary",
+        Code: "5054",
+        SubCategories: null,
+      },
+      {
+        Name: "Tutoring & training",
+        Code: "6894",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5055",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Engineering",
+    Code: "5056",
+    SubCategories: [
+      {
+        Name: "Building services",
+        Code: "5057",
+        SubCategories: null,
+      },
+      {
+        Name: "Civil & structural",
+        Code: "5058",
+        SubCategories: null,
+      },
+      {
+        Name: "Drafting",
+        Code: "5059",
+        SubCategories: null,
+      },
+      {
+        Name: "Electrical",
+        Code: "5060",
+        SubCategories: null,
+      },
+      {
+        Name: "Energy",
+        Code: "6895",
+        SubCategories: null,
+      },
+      {
+        Name: "Environmental",
+        Code: "5061",
+        SubCategories: null,
+      },
+      {
+        Name: "Geotechnical",
+        Code: "0749",
+        SubCategories: null,
+      },
+      {
+        Name: "Industrial",
+        Code: "6896",
+        SubCategories: null,
+      },
+      {
+        Name: "Maintenance",
+        Code: "5062",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5063",
+        SubCategories: null,
+      },
+      {
+        Name: "Mechanical",
+        Code: "5064",
+        SubCategories: null,
+      },
+      {
+        Name: "Project management",
+        Code: "5065",
+        SubCategories: null,
+      },
+      {
+        Name: "Water & waste",
+        Code: "5066",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5067",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Executive & general management",
+    Code: "9831",
+    SubCategories: [],
+  },
+  {
+    Name: "Government & council",
+    Code: "5077",
+    SubCategories: [
+      {
+        Name: "Central government",
+        Code: "5079",
+        SubCategories: null,
+      },
+      {
+        Name: "Defence",
+        Code: "5080",
+        SubCategories: null,
+      },
+      {
+        Name: "Local & regional council",
+        Code: "5078",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5081",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Healthcare",
+    Code: "5082",
+    SubCategories: [
+      {
+        Name: "Administration",
+        Code: "5083",
+        SubCategories: null,
+      },
+      {
+        Name: "Caregiving",
+        Code: "5084",
+        SubCategories: null,
+      },
+      {
+        Name: "Community & social services",
+        Code: "5085",
+        SubCategories: null,
+      },
+      {
+        Name: "Dentistry",
+        Code: "5086",
+        SubCategories: null,
+      },
+      {
+        Name: "Doctors & specialists",
+        Code: "5087",
+        SubCategories: null,
+      },
+      {
+        Name: "Fitness & wellbeing",
+        Code: "0751",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5088",
+        SubCategories: null,
+      },
+      {
+        Name: "Nursing & midwifery",
+        Code: "5090",
+        SubCategories: null,
+      },
+      {
+        Name: "Occupational therapy",
+        Code: "5091",
+        SubCategories: null,
+      },
+      {
+        Name: "Pharmacy",
+        Code: "5092",
+        SubCategories: null,
+      },
+      {
+        Name: "Physiotherapy",
+        Code: "5093",
+        SubCategories: null,
+      },
+      {
+        Name: "Psychology & counselling",
+        Code: "5094",
+        SubCategories: null,
+      },
+      {
+        Name: "Radiography & sonography",
+        Code: "5095",
+        SubCategories: null,
+      },
+      {
+        Name: "Veterinary",
+        Code: "0752",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5096",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Hospitality & tourism",
+    Code: "5097",
+    SubCategories: [
+      {
+        Name: "Bar staff & baristas",
+        Code: "5098",
+        SubCategories: null,
+      },
+      {
+        Name: "Chefs",
+        Code: "5100",
+        SubCategories: null,
+      },
+      {
+        Name: "Housekeeping",
+        Code: "6897",
+        SubCategories: null,
+      },
+      {
+        Name: "Kitchen staff",
+        Code: "5102",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5103",
+        SubCategories: null,
+      },
+      {
+        Name: "Reception & front desk",
+        Code: "5101",
+        SubCategories: null,
+      },
+      {
+        Name: "Tourism & tour guides",
+        Code: "0755",
+        SubCategories: null,
+      },
+      {
+        Name: "Travel consultants",
+        Code: "5104",
+        SubCategories: null,
+      },
+      {
+        Name: "Waiting staff",
+        Code: "5099",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5105",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "HR & recruitment",
+    Code: "5106",
+    SubCategories: [
+      {
+        Name: "Health & safety",
+        Code: "4958",
+        SubCategories: null,
+      },
+      {
+        Name: "HR",
+        Code: "5107",
+        SubCategories: null,
+      },
+      {
+        Name: "Recruitment",
+        Code: "5110",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5111",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "IT",
+    Code: "5112",
+    SubCategories: [
+      {
+        Name: "Architects",
+        Code: "5113",
+        SubCategories: null,
+      },
+      {
+        Name: "Business & systems analysts",
+        Code: "5114",
+        SubCategories: null,
+      },
+      {
+        Name: "Data warehousing & BI",
+        Code: "0759",
+        SubCategories: null,
+      },
+      {
+        Name: "Database",
+        Code: "5115",
+        SubCategories: null,
+      },
+      {
+        Name: "Functional consultants",
+        Code: "6898",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5117",
+        SubCategories: null,
+      },
+      {
+        Name: "Networking & storage",
+        Code: "5118",
+        SubCategories: null,
+      },
+      {
+        Name: "Programming & development",
+        Code: "5119",
+        SubCategories: null,
+      },
+      {
+        Name: "Project management",
+        Code: "5120",
+        SubCategories: null,
+      },
+      {
+        Name: "Sales & pre-sales",
+        Code: "5121",
+        SubCategories: null,
+      },
+      {
+        Name: "Security",
+        Code: "6899",
+        SubCategories: null,
+      },
+      {
+        Name: "Service desk",
+        Code: "5116",
+        SubCategories: null,
+      },
+      {
+        Name: "Systems engineers",
+        Code: "0761",
+        SubCategories: null,
+      },
+      {
+        Name: "Telecommunications",
+        Code: "5122",
+        SubCategories: null,
+      },
+      {
+        Name: "Testing",
+        Code: "5123",
+        SubCategories: null,
+      },
+      {
+        Name: "Training",
+        Code: "6900",
+        SubCategories: null,
+      },
+      {
+        Name: "Web design",
+        Code: "5124",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5125",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Legal",
+    Code: "5126",
+    SubCategories: [
+      {
+        Name: "In-house counsel",
+        Code: "5129",
+        SubCategories: null,
+      },
+      {
+        Name: "Private practice",
+        Code: "5130",
+        SubCategories: null,
+      },
+      {
+        Name: "Secretarial",
+        Code: "5127",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5131",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Manufacturing & operations",
+    Code: "5132",
+    SubCategories: [
+      {
+        Name: "Fitters & machining",
+        Code: "5133",
+        SubCategories: null,
+      },
+      {
+        Name: "Machine operation",
+        Code: "5135",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5136",
+        SubCategories: null,
+      },
+      {
+        Name: "Process & assembly",
+        Code: "5138",
+        SubCategories: null,
+      },
+      {
+        Name: "Purchasing & inventory",
+        Code: "5139",
+        SubCategories: null,
+      },
+      {
+        Name: "Quality assurance",
+        Code: "5140",
+        SubCategories: null,
+      },
+      {
+        Name: "Storepersons & warehousing",
+        Code: "5141",
+        SubCategories: null,
+      },
+      {
+        Name: "Supervisors & forepersons",
+        Code: "6901",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5142",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Marketing, media & communications",
+    Code: "5143",
+    SubCategories: [
+      {
+        Name: "Advertising",
+        Code: "0763",
+        SubCategories: null,
+      },
+      {
+        Name: "Brand & product management",
+        Code: "5145",
+        SubCategories: null,
+      },
+      {
+        Name: "Communications & PR",
+        Code: "5150",
+        SubCategories: null,
+      },
+      {
+        Name: "Design",
+        Code: "5146",
+        SubCategories: null,
+      },
+      {
+        Name: "Digital marketing",
+        Code: "0764",
+        SubCategories: null,
+      },
+      {
+        Name: "Direct marketing",
+        Code: "5147",
+        SubCategories: null,
+      },
+      {
+        Name: "Journalism",
+        Code: "5153",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5151",
+        SubCategories: null,
+      },
+      {
+        Name: "Market research & analysis",
+        Code: "5148",
+        SubCategories: null,
+      },
+      {
+        Name: "Marketing assistants & coordinators",
+        Code: "5149",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5154",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Office & administration",
+    Code: "5155",
+    SubCategories: [
+      {
+        Name: "Administration",
+        Code: "5156",
+        SubCategories: null,
+      },
+      {
+        Name: "Data entry",
+        Code: "5157",
+        SubCategories: null,
+      },
+      {
+        Name: "EA, PA & secretarial",
+        Code: "5159",
+        SubCategories: null,
+      },
+      {
+        Name: "Office management",
+        Code: "5158",
+        SubCategories: null,
+      },
+      {
+        Name: "Reception",
+        Code: "5160",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5162",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Property",
+    Code: "0810",
+    SubCategories: [
+      {
+        Name: "Commercial sales & leasing",
+        Code: "0821",
+        SubCategories: null,
+      },
+      {
+        Name: "Consultancy & valuation",
+        Code: "0840",
+        SubCategories: null,
+      },
+      {
+        Name: "Facilities & commercial property management",
+        Code: "0883",
+        SubCategories: null,
+      },
+      {
+        Name: "Residential sales & management",
+        Code: "0897",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "0898",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Retail",
+    Code: "5171",
+    SubCategories: [
+      {
+        Name: "Area managers",
+        Code: "0765",
+        SubCategories: null,
+      },
+      {
+        Name: "Buying",
+        Code: "0766",
+        SubCategories: null,
+      },
+      {
+        Name: "Department managers",
+        Code: "0768",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5174",
+        SubCategories: null,
+      },
+      {
+        Name: "Merchandising",
+        Code: "5173",
+        SubCategories: null,
+      },
+      {
+        Name: "Retail assistants",
+        Code: "5175",
+        SubCategories: null,
+      },
+      {
+        Name: "Store managers",
+        Code: "5176",
+        SubCategories: null,
+      },
+      {
+        Name: "Assistant store managers",
+        Code: "5177",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5178",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Sales",
+    Code: "5163",
+    SubCategories: [
+      {
+        Name: "Account management",
+        Code: "5164",
+        SubCategories: null,
+      },
+      {
+        Name: "Business development manager",
+        Code: "5165",
+        SubCategories: null,
+      },
+      {
+        Name: "Sales managers",
+        Code: "5166",
+        SubCategories: null,
+      },
+      {
+        Name: "Sales reps",
+        Code: "5167",
+        SubCategories: null,
+      },
+      {
+        Name: "Sales support",
+        Code: "5168",
+        SubCategories: null,
+      },
+      {
+        Name: "Telesales",
+        Code: "5169",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5170",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Science & technology",
+    Code: "5179",
+    SubCategories: [],
+  },
+  {
+    Name: "Trades & services",
+    Code: "5180",
+    SubCategories: [
+      {
+        Name: "Air con. & refrigeration",
+        Code: "5182",
+        SubCategories: null,
+      },
+      {
+        Name: "Beautician",
+        Code: "6902",
+        SubCategories: null,
+      },
+      {
+        Name: "Boat building",
+        Code: "6903",
+        SubCategories: null,
+      },
+      {
+        Name: "Boilermakers & welders",
+        Code: "5184",
+        SubCategories: null,
+      },
+      {
+        Name: "Building & carpentry",
+        Code: "5186",
+        SubCategories: null,
+      },
+      {
+        Name: "Butchers & bakers",
+        Code: "5185",
+        SubCategories: null,
+      },
+      {
+        Name: "Cleaning",
+        Code: "5187",
+        SubCategories: null,
+      },
+      {
+        Name: "Electrical",
+        Code: "5188",
+        SubCategories: null,
+      },
+      {
+        Name: "Flooring",
+        Code: "6904",
+        SubCategories: null,
+      },
+      {
+        Name: "Gardening & landscaping",
+        Code: "5189",
+        SubCategories: null,
+      },
+      {
+        Name: "Glaziers",
+        Code: "6905",
+        SubCategories: null,
+      },
+      {
+        Name: "Hairdressing",
+        Code: "5190",
+        SubCategories: null,
+      },
+      {
+        Name: "Handy-persons",
+        Code: "5191",
+        SubCategories: null,
+      },
+      {
+        Name: "Labourers",
+        Code: "5192",
+        SubCategories: null,
+      },
+      {
+        Name: "Painting",
+        Code: "5193",
+        SubCategories: null,
+      },
+      {
+        Name: "Plumbing",
+        Code: "5194",
+        SubCategories: null,
+      },
+      {
+        Name: "Printing",
+        Code: "5195",
+        SubCategories: null,
+      },
+      {
+        Name: "Roofing",
+        Code: "6906",
+        SubCategories: null,
+      },
+      {
+        Name: "Security",
+        Code: "5196",
+        SubCategories: null,
+      },
+      {
+        Name: "Sign writers",
+        Code: "6907",
+        SubCategories: null,
+      },
+      {
+        Name: "Technicians",
+        Code: "5197",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5198",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Transport & logistics",
+    Code: "5068",
+    SubCategories: [
+      {
+        Name: "Drivers & couriers",
+        Code: "5069",
+        SubCategories: null,
+      },
+      {
+        Name: "Freight forwarders",
+        Code: "5070",
+        SubCategories: null,
+      },
+      {
+        Name: "Import & export",
+        Code: "5075",
+        SubCategories: null,
+      },
+      {
+        Name: "Management",
+        Code: "5072",
+        SubCategories: null,
+      },
+      {
+        Name: "Operations",
+        Code: "5071",
+        SubCategories: null,
+      },
+      {
+        Name: "Supply chain & planning",
+        Code: "5073",
+        SubCategories: null,
+      },
+      {
+        Name: "Warehouse & distribution",
+        Code: "5074",
+        SubCategories: null,
+      },
+      {
+        Name: "Other",
+        Code: "5076",
+        SubCategories: null,
+      },
+    ],
+  },
+  {
+    Name: "Other",
+    Code: "5199",
+    SubCategories: [],
+  },
 ];
-export const getOptions = (number, prefix = 'Choice ') =>
-    _.times(number, index => ({
-        key: index,
-        text: `${prefix}${index}`,
-        value: index,
-    }))
+export const getOptions = (number, prefix = "Choice ") =>
+  _.times(number, (index) => ({
+    key: index,
+    text: `${prefix}${index}`,
+    value: index,
+  }));
+
+export const languageLevelOptions = [
+  "Basic",
+  "Conversational",
+  "Fluent",
+  "Native/Bilingual",
+];
+
+export const skillLevelOptions = ["Beginner", "Intermediate", "Expert"];
+
+export const visaStatusOptions = [
+  "Citizen",
+  "Permanent Resident",
+  "Work Visa",
+  "Student Visa",
+];
+
+//Nationality, Countries List in JavaScript Angular Array
+export const nationalities = [
+  { NationalityID: 1, CountryCode: "GB", Nationality: "British" },
+  { NationalityID: 34, CountryCode: "AF", Nationality: "Afghan" },
+  { NationalityID: 35, CountryCode: "AL", Nationality: "Albanian" },
+  { NationalityID: 36, CountryCode: "DZ", Nationality: "Algerian" },
+  { NationalityID: 158, CountryCode: "US", Nationality: "American" },
+  { NationalityID: 38, CountryCode: "AD", Nationality: "Andorran" },
+  { NationalityID: 39, CountryCode: "AO", Nationality: "Angolan" },
+  { NationalityID: 40, CountryCode: "AM", Nationality: "Armenian" },
+  { NationalityID: 41, CountryCode: "AT", Nationality: "Austrian" },
+  { NationalityID: 42, CountryCode: "AZ", Nationality: "Azerbaijani" },
+  { NationalityID: 2, CountryCode: "AR", Nationality: "Argentinian" },
+  { NationalityID: 3, CountryCode: "AU", Nationality: "Australian" },
+  { NationalityID: 43, CountryCode: "BH", Nationality: "Bahraini" },
+  { NationalityID: 44, CountryCode: "BD", Nationality: "Bangladeshi" },
+  { NationalityID: 45, CountryCode: "BB", Nationality: "Barbadian" },
+  { NationalityID: 46, CountryCode: "BY", Nationality: "Belarusian" },
+  { NationalityID: 47, CountryCode: "BZ", Nationality: "Belizean" },
+  { NationalityID: 48, CountryCode: "BJ", Nationality: "Beninese" },
+  { NationalityID: 49, CountryCode: "BM", Nationality: "Bermudian" },
+  { NationalityID: 50, CountryCode: "BT", Nationality: "Bhutanese" },
+  { NationalityID: 51, CountryCode: "BO", Nationality: "Bolivian" },
+  { NationalityID: 52, CountryCode: "BA", Nationality: "Bosnian" },
+  { NationalityID: 53, CountryCode: "BW", Nationality: "Botswanan" },
+  { NationalityID: 54, CountryCode: "BG", Nationality: "Bulgarian" },
+  { NationalityID: 55, CountryCode: "BF", Nationality: "Burkinese" },
+  { NationalityID: 56, CountryCode: "BI", Nationality: "Burundian" },
+  { NationalityID: 7, CountryCode: "CA", Nationality: "Canadian" },
+  { NationalityID: 8, CountryCode: "CN", Nationality: "Chinese" },
+  { NationalityID: 9, CountryCode: "CO", Nationality: "Colombian" },
+  { NationalityID: 10, CountryCode: "CU", Nationality: "Cuban" },
+  { NationalityID: 57, CountryCode: "KH", Nationality: "Cambodian" },
+  { NationalityID: 58, CountryCode: "CM", Nationality: "Cameroonian" },
+  { NationalityID: 59, CountryCode: "CV", Nationality: "Cape Verdean" },
+  { NationalityID: 60, CountryCode: "TD", Nationality: "Chadian" },
+  { NationalityID: 61, CountryCode: "CL", Nationality: "Chilean" },
+  { NationalityID: 62, CountryCode: "CG", Nationality: "Congolese" },
+  { NationalityID: 63, CountryCode: "CR", Nationality: "Costa Rican" },
+  { NationalityID: 64, CountryCode: "HR", Nationality: "Croat" },
+  { NationalityID: 65, CountryCode: "CY", Nationality: "Cypriot" },
+  { NationalityID: 66, CountryCode: "CZ", Nationality: "Czech" },
+  { NationalityID: 67, CountryCode: "DK", Nationality: "Danish" },
+  { NationalityID: 11, CountryCode: "DO", Nationality: "Dominican" },
+  { NationalityID: 68, CountryCode: "DJ", Nationality: "Djiboutian" },
+  { NationalityID: 69, CountryCode: "DM", Nationality: "Dominican" },
+  { NationalityID: 26, CountryCode: "NL", Nationality: "Dutch" },
+  { NationalityID: 12, CountryCode: "EC", Nationality: "Ecuadorean" },
+  { NationalityID: 70, CountryCode: "EG", Nationality: "Egyptian" },
+  { NationalityID: 71, CountryCode: "ER", Nationality: "Eritrean" },
+  { NationalityID: 72, CountryCode: "EE", Nationality: "Estonian" },
+  { NationalityID: 73, CountryCode: "ET", Nationality: "Ethiopian" },
+  { NationalityID: 74, CountryCode: "FJ", Nationality: "Fijian" },
+  { NationalityID: 75, CountryCode: "FI", Nationality: "Finnish" },
+  { NationalityID: 76, CountryCode: "PF", Nationality: "French Polynesian" },
+  { NationalityID: 14, CountryCode: "FR", Nationality: "French" },
+  { NationalityID: 77, CountryCode: "GA", Nationality: "Gabonese" },
+  { NationalityID: 78, CountryCode: "GM", Nationality: "Gambian" },
+  { NationalityID: 79, CountryCode: "GE", Nationality: "Georgian" },
+  { NationalityID: 15, CountryCode: "DE", Nationality: "German" },
+  { NationalityID: 16, CountryCode: "GT", Nationality: "Guatemalan" },
+  { NationalityID: 80, CountryCode: "GH", Nationality: "Ghanaian" },
+  { NationalityID: 81, CountryCode: "GR", Nationality: "Greek" },
+  { NationalityID: 82, CountryCode: "GD", Nationality: "Grenadian" },
+  { NationalityID: 83, CountryCode: "GN", Nationality: "Guinean" },
+  { NationalityID: 84, CountryCode: "GY", Nationality: "Guyanese" },
+  { NationalityID: 17, CountryCode: "HT", Nationality: "Haitian" },
+  { NationalityID: 18, CountryCode: "HN", Nationality: "Honduran" },
+  { NationalityID: 85, CountryCode: "HU", Nationality: "Hungarian" },
+  { NationalityID: 19, CountryCode: "IN", Nationality: "Indian" },
+  { NationalityID: 20, CountryCode: "IE", Nationality: "Ireland" },
+  { NationalityID: 21, CountryCode: "IL", Nationality: "Israeli" },
+  { NationalityID: 22, CountryCode: "IT", Nationality: "Italian" },
+  { NationalityID: 86, CountryCode: "IS", Nationality: "Icelandic" },
+  { NationalityID: 87, CountryCode: "ID", Nationality: "Indonesian" },
+  { NationalityID: 88, CountryCode: "IR", Nationality: "Iranian" },
+  { NationalityID: 89, CountryCode: "IQ", Nationality: "Iraqi" },
+  { NationalityID: 23, CountryCode: "JP", Nationality: "Japanese" },
+  { NationalityID: 90, CountryCode: "JM", Nationality: "Jamaican" },
+  { NationalityID: 91, CountryCode: "JO", Nationality: "Jordanian" },
+  { NationalityID: 92, CountryCode: "KZ", Nationality: "Kazakh" },
+  { NationalityID: 93, CountryCode: "KE", Nationality: "Kenyan" },
+  { NationalityID: 94, CountryCode: "KP", Nationality: "North Korean" },
+  { NationalityID: 95, CountryCode: "KW", Nationality: "Kuwaiti" },
+  { NationalityID: 96, CountryCode: "LV", Nationality: "Latvian" },
+  { NationalityID: 97, CountryCode: "LB", Nationality: "Lebanese" },
+  { NationalityID: 98, CountryCode: "LR", Nationality: "Liberian" },
+  { NationalityID: 99, CountryCode: "LY", Nationality: "Libyan" },
+  { NationalityID: 100, CountryCode: "LT", Nationality: "Lithuanian" },
+  { NationalityID: 101, CountryCode: "LU", Nationality: "LUXEMBOURG" },
+  { NationalityID: 102, CountryCode: "MG", Nationality: "Madagascan" },
+  { NationalityID: 103, CountryCode: "MW", Nationality: "Malawian" },
+  { NationalityID: 104, CountryCode: "MY", Nationality: "Malaysian" },
+  { NationalityID: 105, CountryCode: "MV", Nationality: "Maldivian" },
+  { NationalityID: 106, CountryCode: "ML", Nationality: "Malian" },
+  { NationalityID: 107, CountryCode: "MT", Nationality: "Maltese" },
+  { NationalityID: 108, CountryCode: "MR", Nationality: "Mauritanian" },
+  { NationalityID: 109, CountryCode: "MU", Nationality: "Mauritian" },
+  { NationalityID: 110, CountryCode: "MC", Nationality: "Monacan" },
+  { NationalityID: 111, CountryCode: "MN", Nationality: "Mongolian" },
+  { NationalityID: 112, CountryCode: "ME", Nationality: "Montenegrin" },
+  { NationalityID: 113, CountryCode: "MA", Nationality: "Moroccan" },
+  { NationalityID: 114, CountryCode: "MZ", Nationality: "Mozambican" },
+  { NationalityID: 25, CountryCode: "MX", Nationality: "Mexican" },
+  { NationalityID: 115, CountryCode: "NA", Nationality: "Namibian" },
+  { NationalityID: 116, CountryCode: "NP", Nationality: "Nepalese" },
+  { NationalityID: 117, CountryCode: "NZ", Nationality: "New Zealand" },
+  { NationalityID: 118, CountryCode: "NI", Nationality: "Nicaraguan" },
+  { NationalityID: 119, CountryCode: "NE", Nationality: "Nigerien" },
+  { NationalityID: 120, CountryCode: "NG", Nationality: "Nigerian" },
+  { NationalityID: 121, CountryCode: "NO", Nationality: "Norwegian" },
+  { NationalityID: 122, CountryCode: "OM", Nationality: "Omani" },
+  { NationalityID: 123, CountryCode: "PK", Nationality: "Pakistani" },
+  { NationalityID: 124, CountryCode: "PA", Nationality: "Panamanian" },
+  { NationalityID: 125, CountryCode: "PG", Nationality: "Guinean" },
+  { NationalityID: 126, CountryCode: "PY", Nationality: "Paraguayan" },
+  { NationalityID: 127, CountryCode: "PE", Nationality: "Peruvian" },
+  { NationalityID: 27, CountryCode: "PH", Nationality: "Philippine" },
+  { NationalityID: 128, CountryCode: "PL", Nationality: "Polish" },
+  { NationalityID: 129, CountryCode: "PT", Nationality: "Portuguese" },
+  { NationalityID: 130, CountryCode: "QA", Nationality: "Qatari" },
+  { NationalityID: 131, CountryCode: "RO", Nationality: "Romanian" },
+  { NationalityID: 132, CountryCode: "RW", Nationality: "Rwandan" },
+  { NationalityID: 13, CountryCode: "SV", Nationality: "Salvadorean" },
+  { NationalityID: 37, CountryCode: "AS", Nationality: "Samoan" },
+  { NationalityID: 133, CountryCode: "SA", Nationality: "Saudi Arabian" },
+  { NationalityID: 134, CountryCode: "SN", Nationality: "Senegalese" },
+  { NationalityID: 135, CountryCode: "RS", Nationality: "Serbian" },
+  { NationalityID: 136, CountryCode: "SL", Nationality: "Sierra Leonian" },
+  { NationalityID: 137, CountryCode: "SG", Nationality: "Singaporean" },
+  { NationalityID: 138, CountryCode: "SK", Nationality: "Slovak" },
+  { NationalityID: 139, CountryCode: "SI", Nationality: "Slovenian" },
+  { NationalityID: 140, CountryCode: "SB", Nationality: "Slomoni" },
+  { NationalityID: 141, CountryCode: "SO", Nationality: "Somali" },
+  { NationalityID: 142, CountryCode: "ZA", Nationality: "South African" },
+  { NationalityID: 24, CountryCode: "KR", Nationality: "South Korean" },
+  { NationalityID: 28, CountryCode: "ES", Nationality: "Spanish" },
+  { NationalityID: 29, CountryCode: "SE", Nationality: "Swedish" },
+  { NationalityID: 30, CountryCode: "CH", Nationality: "Swiss" },
+  { NationalityID: 143, CountryCode: "LK", Nationality: "Sri Lankan" },
+  { NationalityID: 144, CountryCode: "SD", Nationality: "Sudanese" },
+  { NationalityID: 145, CountryCode: "SR", Nationality: "Surinamese" },
+  { NationalityID: 146, CountryCode: "SZ", Nationality: "Swazi" },
+  { NationalityID: 31, CountryCode: "TW", Nationality: "Taiwanese" },
+  { NationalityID: 147, CountryCode: "TJ", Nationality: "Tajik" },
+  { NationalityID: 148, CountryCode: "TH", Nationality: "Thai" },
+  { NationalityID: 149, CountryCode: "TG", Nationality: "Togolese" },
+  { NationalityID: 150, CountryCode: "TT", Nationality: "Trinidadian" },
+  { NationalityID: 151, CountryCode: "TN", Nationality: "Tunisian" },
+  { NationalityID: 152, CountryCode: "TR", Nationality: "Turkish" },
+  { NationalityID: 153, CountryCode: "TM", Nationality: "Turkoman" },
+  { NationalityID: 154, CountryCode: "TV", Nationality: "Tuvaluan" },
+  { NationalityID: 155, CountryCode: "UG", Nationality: "Ugandan" },
+  { NationalityID: 156, CountryCode: "UA", Nationality: "Ukrainian" },
+  { NationalityID: 157, CountryCode: "AE", Nationality: "Emirati" },
+  { NationalityID: 32, CountryCode: "VE", Nationality: "Venezuelan" },
+  { NationalityID: 33, CountryCode: "VN", Nationality: "Vietnamese" },
+  { NationalityID: 159, CountryCode: "UY", Nationality: "Uruguayan" },
+  { NationalityID: 160, CountryCode: "UZ", Nationality: "Uzbek" },
+  { NationalityID: 161, CountryCode: "VU", Nationality: "Vanuatuan" },
+  { NationalityID: 162, CountryCode: "YE", Nationality: "Yemeni" },
+  { NationalityID: 163, CountryCode: "ZM", Nationality: "Zambian" },
+];
