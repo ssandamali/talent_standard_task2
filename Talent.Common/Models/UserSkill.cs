@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Talent.Common.Models
 {
+    [BsonIgnoreExtraElements]
     public class UserSkill : IMongoCommon
     {
         public bool IsDeleted { get; set; }

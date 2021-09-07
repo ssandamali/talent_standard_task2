@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Talent.Common.Models
 {
+    [BsonIgnoreExtraElements]
     public class UserExperience
     {
         [BsonId]

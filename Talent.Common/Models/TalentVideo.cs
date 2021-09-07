@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Talent.Common.Models
 {
+
     public class TalentVideo
     {
         public string FullVideoName { get; set; }

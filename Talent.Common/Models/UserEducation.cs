@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Talent.Common.Models
 {
+    [BsonIgnoreExtraElements]
     public class UserEducation : IMongoCommon
     {
         [BsonId]

@@ -95,6 +95,8 @@ namespace Talent.Services.Profile.Controllers
             return Json(new { Username = user.FirstName });
         }
 
+       
+
         [HttpGet("getProfileById")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "talent")]
         public async Task<IActionResult> GetProfileById(string uid)
@@ -132,6 +134,8 @@ namespace Talent.Services.Profile.Controllers
                 return Json(new { IsAuthenticated = false, Type = "" });
             }
         }
+
+        
 
         [HttpGet("getLanguage")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "talent")]
@@ -242,9 +246,15 @@ namespace Talent.Services.Profile.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "talent")]
         public async Task<ActionResult> UpdateProfilePhoto()
         {
-            //Your code here;
-            throw new NotImplementedException();
+            IFormFile file = Request.Form.Files[0];
+            if (await _profileService.UpdateTalentPhoto(_userAppContext.CurrentUserId, file))
+            {
+                return Json(new { Success = true });
+            }
+                return Json(new { Success = false });
         }
+
+
 
         [HttpPost("updateTalentCV")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "talent")]
@@ -320,7 +330,9 @@ namespace Talent.Services.Profile.Controllers
 
         [HttpGet("getEmployerProfile")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "employer, recruiter")]
-        public async Task<IActionResult> GetEmployerProfile(String id = "", String role = "")
+        
+
+         public async Task<IActionResult> GetEmployerProfile(String id = "", String role = "")
         {
             try
             {
@@ -438,8 +450,9 @@ namespace Talent.Services.Profile.Controllers
         {
             try
             {
-                var result = (await _profileService.GetTalentSnapshotList(_userAppContext.CurrentUserId, false, feed.Position, feed.Number)).ToList();
-
+                var result = await _profileService.GetTalentSnapshotList(_userAppContext.CurrentUserId, false, feed.Position, feed.Number);
+                
+                return Json(new { Success = true, TalentList = result });
                 // Dummy talent to fill out the list once we run out of data
                 //if (result.Count == 0)
                 //{
@@ -456,7 +469,7 @@ namespace Talent.Services.Profile.Controllers
                 //            }
                 //        );
                 //}
-                return Json(new { Success = true, Data = result });
+             //   return Json(new { Success = result});
             }
             catch (Exception e)
             {

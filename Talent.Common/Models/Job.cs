@@ -10,7 +10,7 @@ namespace Talent.Common.Models
     {
         Active, Closed
     }
-    
+    [BsonIgnoreExtraElements]
     public class Job:IMongoCommon
     {
         [BsonId]

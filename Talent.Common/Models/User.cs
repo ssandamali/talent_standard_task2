@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Talent.Common.Models
 {
+    [BsonIgnoreExtraElements]
     public class User : IMongoCommon
     {
         public Guid UId { get; set; }
@@ -51,6 +52,8 @@ namespace Talent.Common.Models
         public bool IsDeleted { get; set; }
         public Login Login { get; set; }
 
+       
+
         public User()
         {
             Languages = new List<UserLanguage>();
@@ -63,7 +66,7 @@ namespace Talent.Common.Models
             LinkedAccounts = new LinkedAccounts();
         }
     }
-
+    [BsonIgnoreExtraElements]
     public class Address
     {
         public string Number { get; set; }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Talent.Common.Models
 {
+   
     public class SearchCompanyModel
     {
         public string Name { get; set; }//company name

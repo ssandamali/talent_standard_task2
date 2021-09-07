@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace Talent.Common.Models
 {
+    [BsonIgnoreExtraElements]
     public class MatchingPool
     {
         string[] EmployerID { get; set; }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Talent.Common.Models
 {
+  
     public class FeedIncrementModel
     {
         public int Position { get; set; }
